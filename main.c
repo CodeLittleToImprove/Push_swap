@@ -11,9 +11,13 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+// not working
 int	main(int argc, char *argv[])
 {
-
+	if (argc < 2)
+		return (0);
+	printf("before if");
+	if (is_valid_input(argv) == true)
+		printf("input valid");
 	return (0);
 }

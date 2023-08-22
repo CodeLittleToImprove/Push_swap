@@ -1,2 +1,1 @@
-gcc -o pipex main.c pipex.c utils.c error.c -I include -L libft -lft
-
+gcc -o push_swap main.c input_validation.c -I include -L libft -lft

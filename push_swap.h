@@ -17,5 +17,8 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdbool.h>
-
+# include <ctype.h>
+//input_validation
+bool	is_valid_input(char *argv[]);
+bool	is_a_number(char *argv);
 #endif

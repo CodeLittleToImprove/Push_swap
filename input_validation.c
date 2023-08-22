@@ -14,13 +14,32 @@
 
 bool	is_valid_input(char *argv[])
 {
+	size_t	index;
+
+	index = 1;
+	while (*argv[index] != '\0')
+	{
+		if (is_a_number(argv[index]) == false)
+			return (false);
+		index++;
+	}
 
 	return (true);
 }
 
-bool	is_a_number(char *argv[])
+bool	is_a_number(char *argv)
 {
-	return (true);
+	if (argv == NULL || *argv == '\0')
+		return (false);
+
+	while (*argv)
+	{
+		if (!isdigit(*argv) && *argv != '-')
+			return (false);
+		argv++;
+	}
+
+	return true;
 }
 
 //bool	is_not_a_duplicate(char *argv[])
