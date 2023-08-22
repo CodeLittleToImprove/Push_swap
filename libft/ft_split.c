@@ -6,7 +6,7 @@
 /*   By: tbui-quo <tbui-quo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 16:12:59 by tbui-quo          #+#    #+#             */
-/*   Updated: 2023/03/13 17:15:18 by tbui-quo         ###   ########.fr       */
+/*   Updated: 2023/01/11 14:40:24 by tbui-quo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,20 @@
 
 static	size_t	ft_count_word(char const *s, char c)
 {
-	int	i;
-	int	word_counter;
+	size_t	cursor_index;
+	size_t	word_counter;
 
-	i = 0;
+	cursor_index = 0;
 	word_counter = 0;
-	while (s != 0 && s[i] != '\0')
+	while (s != 0 && s[cursor_index] != '\0')
 	{
-		if (s[i] == c)
-			i++;
+		if (s[cursor_index] == c)
+			cursor_index++;
 		else
 		{
 			word_counter++;
-			while (s[i] != c && s[i] != '\0')
-				i++;
+			while (s[cursor_index] != c && s[cursor_index] != '\0')
+				cursor_index++;
 		}
 	}
 	return (word_counter);
@@ -46,52 +46,52 @@ static	size_t	ft_count_word(char const *s, char c)
 
 static	size_t	ft_word_size(char const *s, char c)
 {
-	size_t	size;
-	size_t	i;
+	size_t	word_size;
+	size_t	index;
 
-	size = 0;
-	i = 0;
-	while (s[i] != c && s[i] != '\0')
+	word_size = 0;
+	index = 0;
+	while (s[index] != c && s[index] != '\0')
 	{
-		size++;
-		i++;
+		word_size++;
+		index++;
 	}
-	return (size);
+	return (word_size);
 }
 
-static	void	ft_free(char **strarray, size_t array_index)
+static	void	ft_free(char **str_array, size_t array_index)
 {
 	while (array_index-- > 0)
-		free(strarray[array_index]);
-	free(strarray);
+		free(str_array[array_index]);
+	free(str_array);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	size_t	word_counter;
-	char	**strarray;
+	char	**str_array;
 	size_t	array_index;
 
 	word_counter = ft_count_word(s, c);
 	array_index = 0;
-	strarray = (char **)malloc((word_counter + 1) * sizeof(char *));
-	if (!strarray)
+	str_array = (char **)malloc((word_counter + 1) * sizeof(char *));
+	if (!str_array)
 		return (0);
 	while (word_counter--)
 	{
 		while (*s == c)
 			s++;
-		strarray[array_index] = ft_substr(s, 0, ft_word_size(s, c));
-		if (!strarray[array_index])
+		str_array[array_index] = ft_substr(s, 0, ft_word_size(s, c));
+		if (!str_array[array_index])
 		{
-			ft_free(strarray, array_index);
+			ft_free(str_array, array_index);
 			return (0);
 		}
 		array_index++;
 		s += ft_word_size(s, c);
 	}
-	strarray[array_index] = 0;
-	return (strarray);
+	str_array[array_index] = 0;
+	return (str_array);
 }
 
 // int	main(void)

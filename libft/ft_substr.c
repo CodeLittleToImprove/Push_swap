@@ -24,15 +24,15 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substring;
-	size_t	remaider_size;
+	size_t	remainder_size;
 
 	if (!s)
 		return (0);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	remaider_size = ft_strlen(s + start);
-	if (remaider_size < len)
-		len = remaider_size;
+	remainder_size = ft_strlen(s + start);
+	if (remainder_size < len)
+		len = remainder_size;
 	substring = malloc(sizeof(char) * (len + 1));
 	if (!substring)
 	{
@@ -44,7 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // Second if needed when the start
 // is after the end of the whole string
-// the variable remaider_size is needed
+// the variable remainder_size is needed
 // to determine how big the remainder of s is.
 // The 'remaider_size' variable represents 
 // the remaider_size of the substring being returned,
