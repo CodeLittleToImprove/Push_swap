@@ -1,0 +1,5 @@
+# ninja log v5
+0	127	1692712980000000000	CMakeFiles/push_swap.dir/input_validation.c.o	e29fe8b2da43f22c
+1	135	1692712980000000000	CMakeFiles/push_swap.dir/main.c.o	5e8ad9b87dbd519c
+0	74	1692713003000000000	CMakeFiles/push_swap.dir/input_validation.c.o	e29fe8b2da43f22c
+74	131	1692713004000000000	push_swap	1a63a564f8831786

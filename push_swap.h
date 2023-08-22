@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbui-quo <tbui-quo@student.42wolfsburg.d>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/19 18:44:17 by tbui-quo          #+#    #+#             */
-/*   Updated: 2023/07/04 18:07:18 by tbui-quo         ###   ########.fr       */
+/*   Created: 2023/08/22 14:44:37 by tbui-quo          #+#    #+#             */
+/*   Updated: 2023/08/22 15:59:19 by tbui-quo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int	main(void)
-{
-	return (0);
-}
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+
+#endif

@@ -12,7 +12,7 @@
 
 # Target names
 
-NAME			= Example
+NAME			= push_swap
 
 LIBFT			= libft
 
@@ -25,7 +25,7 @@ SRCS			= main.c
 
 OBJS			= ${SRCS:.c=.o}
 
-HEADER			= example.h
+HEADER			= push_swap.h
 
 
 # Compiler and compilation flags
