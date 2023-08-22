@@ -1,0 +1,2 @@
+gcc -o pipex main.c pipex.c utils.c error.c -I include -L libft -lft
+
