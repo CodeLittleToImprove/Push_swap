@@ -12,3 +12,18 @@
 
 #include "push_swap.h"
 
+bool	is_valid_input(char *argv[])
+{
+
+	return (true);
+}
+
+bool	is_a_number(char *argv[])
+{
+	return (true);
+}
+
+//bool	is_not_a_duplicate(char *argv[])
+//{
+//	return (true);
+//}
