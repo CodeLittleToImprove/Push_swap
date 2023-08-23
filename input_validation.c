@@ -19,15 +19,17 @@ bool	is_valid_input(char *argv[], int size)
 	index = 1;
 
 	if (is_not_a_duplicate(argv, size))
-		return (false);
-	while (argv[index] != NULL)
 	{
-		if (is_valid_number(argv[index]))
-			return (false);
-		index++;
+		while (argv[index] != NULL)
+		{
+			if (!is_valid_number(argv[index]))
+				return (false);
+			index++;
+		}
+		return (true);
 	}
-
-	return (true);
+	else
+		return (false);
 }
 
 bool	is_valid_start_character(char c)
