@@ -70,7 +70,8 @@ bool	is_not_a_duplicate(char *argv[], int size)
 		inner_index = outer_index + 1;
 		while (inner_index < size)
 		{
-			if (strcmp(argv[outer_index], argv[inner_index]) == 0)
+			if (ft_strncmp(argv[outer_index], argv[inner_index],
+					ft_strlen(argv[outer_index])) == 0)
 				return (false);
 			inner_index++;
 		}
@@ -79,5 +80,3 @@ bool	is_not_a_duplicate(char *argv[], int size)
 
 	return (true);
 }
-
-// still something wrong but i think it the duplicate function works okay

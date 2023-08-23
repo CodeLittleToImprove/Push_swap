@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   error_handler.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbui-quo <tbui-quo@student.42wolfsburg.d>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/19 18:44:17 by tbui-quo          #+#    #+#             */
-/*   Updated: 2023/07/04 18:07:18 by tbui-quo         ###   ########.fr       */
+/*   Created: 2023/08/23 16:05:18 by tbui-quo          #+#    #+#             */
+/*   Updated: 2023/08/23 16:05:18 by tbui-quo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// not working
-int	main(int argc, char *argv[])
+
+void	ft_free_array(char *array[])
 {
-	if (argc <= 1)
-		return (1);
-//	printf("%d\n", argc - 1);
+	size_t	i;
 
-	if (is_valid_input(argv, argc - 1) == true)
+	i = 0;
+	while (array[i])
 	{
-//		if (argc == 2)
-//			argv = ft_split(argv[1], ' ');
-//	stack_init
-		printf("input valid");
+		free(array[i]);
+		i++;
 	}
-	else
-	{
-//		ft_free_array(argv);
-		printf("input invalid!");
-	}
-
-	return (0);
+	free(array);
 }

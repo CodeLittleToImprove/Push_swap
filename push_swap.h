@@ -13,16 +13,21 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include "libft/libft.h"
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <stdbool.h>
 # include <ctype.h>
 # include <string.h>
+
 //input_validation
 bool	is_valid_input(char *argv[], int size);
 bool	is_valid_start_character(char c);
 bool	is_valid_digit(char c);
 bool	is_valid_number(char *str_nbr);
 bool	is_not_a_duplicate(char *argv[], int size);
+
+//
+void	ft_free_array(char *array[]);
 #endif

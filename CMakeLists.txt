@@ -10,9 +10,8 @@ set_target_properties(libft PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/lib
 add_executable(push_swap
         push_swap.h
         input_validation.c
-        main.c)
+        main.c error_handler.c)
 
 # Link the executable with the libft library
 target_link_libraries(push_swap libft)
-
 

@@ -61,6 +61,12 @@ build CMakeFiles/push_swap.dir/main.c.o: C_COMPILER__push_swap_Debug /Users/tbui
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
 
+build CMakeFiles/push_swap.dir/error_handler.c.o: C_COMPILER__push_swap_Debug /Users/tbui-quo/Downloads/push_swap/error_handler.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/error_handler.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fcolor-diagnostics -std=gnu99
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target push_swap
@@ -69,7 +75,7 @@ build CMakeFiles/push_swap.dir/main.c.o: C_COMPILER__push_swap_Debug /Users/tbui
 #############################################
 # Link the executable push_swap
 
-build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/input_validation.c.o CMakeFiles/push_swap.dir/main.c.o | /Users/tbui-quo/Downloads/push_swap/libft/libft.a
+build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/input_validation.c.o CMakeFiles/push_swap.dir/main.c.o CMakeFiles/push_swap.dir/error_handler.c.o | /Users/tbui-quo/Downloads/push_swap/libft/libft.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
   LINK_LIBRARIES = /Users/tbui-quo/Downloads/push_swap/libft/libft.a
   OBJECT_DIR = CMakeFiles/push_swap.dir
