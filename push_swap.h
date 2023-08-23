@@ -20,5 +20,8 @@
 # include <ctype.h>
 //input_validation
 bool	is_valid_input(char *argv[]);
-bool	is_a_number(char *argv);
+bool	is_valid_start_character(char c);
+bool	is_valid_digit(char c);
+bool	is_valid_number(char *str_nbr);
+bool	is_not_a_duplicate(char *str_nbr);
 #endif
