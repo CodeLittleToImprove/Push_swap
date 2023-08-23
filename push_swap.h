@@ -21,6 +21,13 @@
 # include <ctype.h>
 # include <string.h>
 
+typedef struct s_stack_node
+{
+	int							content;
+	struct s_stack_node			*next;
+	struct s_stack_node			*prev;
+}	t_stack_node;
+
 //input_validation
 bool	is_valid_input(char *argv[], int size);
 bool	is_valid_start_character(char c);
@@ -28,6 +35,9 @@ bool	is_valid_digit(char c);
 bool	is_valid_number(char *str_nbr);
 bool	is_not_a_duplicate(char *argv[], int size);
 
-//
+//error handling
 void	ft_free_array(char *array[]);
+
+//stack_initialization
+void	insert_stack(t_stack_node **root, int value);
 #endif

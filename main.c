@@ -14,6 +14,9 @@
 // not working
 int	main(int argc, char *argv[])
 {
+	t_stack_node	*a;
+	t_stack_node	*b;
+
 	if (argc <= 1)
 		return (1);
 //	printf("%d\n", argc - 1);

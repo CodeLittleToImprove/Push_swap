@@ -1,10 +1,6 @@
 # ninja log v5
-91	175	1692800024000000000	push_swap	aebb4111c89c40aa
-0	169	1692800893000000000	build.ninja	89cf4c8e23992b34
-1	71	1692799905000000000	CMakeFiles/push_swap.dir/error_handler.c.o	3e76882313b31477
-1	276	1692800729000000000	CMakeFiles/push_swap.dir/main.c.o	5e8ad9b87dbd519c
-2	273	1692799832000000000	CMakeFiles/push_swap.dir/input_validation.c.o	e29fe8b2da43f22c
+94	168	1692800987000000000	push_swap	aebb4111c89c40aa
+0	169	1692805163000000000	build.ninja	89cf4c8e23992b34
+1	94	1692800987000000000	CMakeFiles/push_swap.dir/error_handler.c.o	3e76882313b31477
 1	77	1692800987000000000	CMakeFiles/push_swap.dir/main.c.o	5e8ad9b87dbd519c
 0	89	1692800987000000000	CMakeFiles/push_swap.dir/input_validation.c.o	e29fe8b2da43f22c
-1	94	1692800987000000000	CMakeFiles/push_swap.dir/error_handler.c.o	3e76882313b31477
-94	168	1692800987000000000	push_swap	aebb4111c89c40aa
