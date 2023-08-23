@@ -16,7 +16,8 @@ int	main(int argc, char *argv[])
 {
 	if (argc < 2)
 		return (0);
-	if (is_valid_input(argv) == true)
+//	printf("%d\n", argc - 1);
+	if (is_valid_input(argv, argc - 1) == true)
 		printf("input valid");
 	else
 		printf("input invalid!");

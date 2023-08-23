@@ -12,14 +12,17 @@
 
 #include "push_swap.h"
 
-bool	is_valid_input(char *argv[])
+bool	is_valid_input(char *argv[], int size)
 {
 	size_t	index;
 
 	index = 1;
+
+	if (is_not_a_duplicate(argv, size))
+		return (false);
 	while (argv[index] != NULL)
 	{
-		if ((is_valid_number(argv[index])) && is_not_a_duplicate(argv[index]))
+		if (is_valid_number(argv[index]))
 			return (false);
 		index++;
 	}
@@ -54,7 +57,25 @@ bool	is_valid_number(char *str_nbr)
 	return (true);
 }
 
-bool	is_not_a_duplicate(char *str_nbr)
+bool	is_not_a_duplicate(char *argv[], int size)
 {
+	size_t	outer_index;
+	size_t	inner_index;
+
+	outer_index = 0;
+	while (outer_index < size -1)
+	{
+		inner_index = outer_index + 1;
+		while (inner_index < size)
+		{
+			if (strcmp(argv[outer_index], argv[inner_index]) == 0)
+				return (false);
+			inner_index++;
+		}
+		outer_index++;
+	}
+
 	return (true);
 }
+
+// still something wrong but i think it the duplicate function works okay

@@ -18,10 +18,11 @@
 # include <stdio.h>
 # include <stdbool.h>
 # include <ctype.h>
+# include <string.h>
 //input_validation
-bool	is_valid_input(char *argv[]);
+bool	is_valid_input(char *argv[], int size);
 bool	is_valid_start_character(char c);
 bool	is_valid_digit(char c);
 bool	is_valid_number(char *str_nbr);
-bool	is_not_a_duplicate(char *str_nbr);
+bool	is_not_a_duplicate(char *argv[], int size);
 #endif
