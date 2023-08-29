@@ -14,24 +14,20 @@
 // not working
 int	main(int argc, char *argv[])
 {
-	t_stack_node	*a;
-	t_stack_node	*b;
-	t_stack_node	*test;
-	size_t			argv_index;
-
-	a = NULL;
-	b = NULL;
-	argv_index = 1;
+	t_stack_data	*set;
 
 	if (argc <= 1)
 		return (1);
-//	printf("%d\n", argc - 1);
+
 
 	if (is_valid_input(argv, argc - 1) == true)
 	{
 //		if (argc == 2)
 //			argv = ft_split(argv[1], ' ');
-//	stack_init
+		set = init_stacks_struct();
+		if (!set)
+			return (1);
+		set->stack_a = init_stack_a(argv, argc);
 
 		while (argv_index < argc)
 		{
@@ -40,16 +36,16 @@ int	main(int argc, char *argv[])
 		}
 		printf("Nodes written\n");
 		// test if node are written correct
-		test = a;
-		while (test != NULL)
-		{
-			printf("Start print\n");
-			if (test->content != NULL)
-				printf("%d\n", *(test->content));
-			else
-				printf("Content is NULL \n");
-			test = test->next;
-		}
+//		test = a;
+//		while (test != NULL)
+//		{
+//			printf("Start print\n");
+//			if (test->content != NULL)
+//				printf("%d\n", *(test->content));
+//			else
+//				printf("Content is NULL \n");
+//			test = test->next;
+//		}
 	}
 	else
 	{
