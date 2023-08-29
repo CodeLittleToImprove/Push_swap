@@ -40,26 +40,26 @@ void	insert_stack(t_stack_node **root, int value)
 	current->next = new_node;
 }
 
-int	main(void)
-{
-	t_stack_node	*root;
-	t_stack_node	*current;
-
-	root = NULL;
-
-	insert_stack(&root, 5);
-	insert_stack(&root, -2);
-	insert_stack(&root, 6);
-
-	current = root;
-	while (current != NULL)
-	{
-		if (current->content != NULL)
-			printf("%d\n", *(current->content));
-		else
-			printf("Content is NULL \n");
-		current = current->next;
-	}
-
-	return (0);
-}
+//int	main(void)
+//{
+//	t_stack_node	*root;
+//	t_stack_node	*current;
+//
+//	root = NULL;
+//
+//	insert_stack(&root, 5);
+//	insert_stack(&root, -2);
+//	insert_stack(&root, 6);
+//
+//	current = root;
+//	while (current != NULL)
+//	{
+//		if (current->content != NULL)
+//			printf("%d\n", *(current->content));
+//		else
+//			printf("Content is NULL \n");
+//		current = current->next;
+//	}
+//
+//	return (0);
+//}
