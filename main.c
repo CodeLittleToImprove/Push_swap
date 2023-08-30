@@ -29,11 +29,11 @@ int	main(int argc, char *argv[])
 			return (1);
 		set->stack_a = init_stack_a(argv, argc);
 
-		while (argv_index < argc)
-		{
-			insert_stack(&a, ft_atoi(argv[argv_index]));
-			argv_index++;
-		}
+//		while (argv_index < argc)
+//		{
+//			insert_stack(&a, ft_atoi(argv[argv_index]));
+//			argv_index++;
+//		}
 		printf("Nodes written\n");
 		// test if node are written correct
 //		test = a;
