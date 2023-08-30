@@ -92,6 +92,7 @@ t_stack	*init_stack_a(char *argv[], int argc)
 //	}
 
 	stack_a = create_list(input_array, argc);
+    printf("hallo bin ich hier");
 	return (stack_a);
 }
 // not working
@@ -101,12 +102,14 @@ t_stack	*create_list(char **input_array, int argc)
 	size_t			index;
 	t_stack			*stack_a;
 
+    stack_a = NULL;
+
 	index = 0;
     printf("currently insert value %s\n", input_array[0]);
     printf("currently insert value %s\n", input_array[1]);
     printf("currently insert value %s\n", input_array[2]);
-//    printf("argc %d\n", argc);
-	while (index < argc)
+    printf("argc %d\n", argc);
+	while (index < argc - 1 )
 	{
         printf("Inserting element %d\n", ft_atoi(input_array[index]));
         insert_stack(&stack_a, ft_atoi(input_array[index]));
@@ -114,7 +117,7 @@ t_stack	*create_list(char **input_array, int argc)
 		index++;
         printf("index after incrementation %d\n", index);
 	}
-
+    printf("hallo bin ich hier ub create list");
 	return (stack_a);
 }
 //int	old main(void)
