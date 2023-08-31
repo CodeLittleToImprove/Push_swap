@@ -36,23 +36,28 @@ void	insert_stack(t_stack **root, int value)
 
 	if (*root == NULL)
 	{
+//		printf("Should happen only once \n");
 		*root = new_node;
 		return ;
 	}
-//	printf("current pointer value before setting root: %p\n", (void *)current);
+	printf("current pointer value before setting root: %p\n", (void *)current);
 	current = *root;
-//	printf("current pointer value after setting root: %p\n", (void *)current);
+	printf("current pointer value after setting root: %p\n", (void *)current);
 	if (current == NULL)
 	{
+//		printf("I am hopefully not here");
 		perror("Error: Attempted to insert into an empty stack");
 		exit(1);
 	}
+//	if (current->next == NULL)
+	printf("Traversing the list:\n");
 	while (current->next != NULL)
 	{
-//		printf("current pointer value before setting next: %p\n", (void *)current);
-		current->next = new_node;
-//		printf("current pointer value after setting next: %p\n", (void *)current);
+		printf("current pointer value before setting next: %p\n", (void *)current);
+		current = current->next;
+		printf("current pointer value after setting next: %p\n", (void *)current);
 	}
+	printf("Adding new node at the end:\n");
 	current->next = new_node;
 }
 
@@ -100,9 +105,9 @@ t_stack	*create_list(char **input_array)
 	{
 		printf("Inserting element %zu\n", ft_atoi(input_array[index]));
 		insert_stack(&stack_a, ft_atoi(input_array[index]));
-		printf("index pre incrementation %zu\n", index);
+//		printf("index pre incrementation %zu\n", index);
 		index++;
-		printf("index after incrementation %zu\n", index);
+//		printf("index after incrementation %zu\n", index);
 	}
 	return (stack_a);
 }

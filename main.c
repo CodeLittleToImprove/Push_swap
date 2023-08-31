@@ -35,7 +35,7 @@ int	main(int argc, char *argv[])
 		if (!set)
 			return (1);
 		set->stack_a = init_stack_a(argv);
-		printf("Nodes written\n");
+		printf("Nodes successful written\n");
 		// test if node are written correct
 //		test = a;
 //		while (test != NULL)
