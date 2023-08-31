@@ -19,11 +19,11 @@ void	insert_stack(t_stack **root, int value)
 
 	new_node = malloc(sizeof(t_stack));
 	if (new_node == NULL)
-    {
-        perror("Error allocating memory for new node");
-        exit(1);
-    }
-    printf("Allocated memory for new node at address: %p\n", (void *)new_node);
+	{
+		perror("Error allocating memory for new node");
+		exit(1);
+	}
+//	printf("Allocated memory for new node at address: %p\n", (void *)new_node);
 	new_node->content = malloc(sizeof(int));
 	if (new_node->content == NULL)
 	{
@@ -39,35 +39,26 @@ void	insert_stack(t_stack **root, int value)
 		*root = new_node;
 		return ;
 	}
-    printf("current pointer value before setting root: %p\n", (void *)current);
+//	printf("current pointer value before setting root: %p\n", (void *)current);
 	current = *root;
-    printf("current pointer value after setting root: %p\n", (void *)current);
-    if(current == NULL)
-    {
-        perror("Error: Attempted to insert into an empty stack");
-        exit(1);
-    }
+//	printf("current pointer value after setting root: %p\n", (void *)current);
+	if (current == NULL)
+	{
+		perror("Error: Attempted to insert into an empty stack");
+		exit(1);
+	}
 	while (current->next != NULL)
-    {
-        printf("current pointer value before setting next: %p\n", (void *)current);
-        current->next = new_node;
-        printf("current pointer value after setting next: %p\n", (void *)current);
-    }
+	{
+//		printf("current pointer value before setting next: %p\n", (void *)current);
+		current->next = new_node;
+//		printf("current pointer value after setting next: %p\n", (void *)current);
+	}
 	current->next = new_node;
 }
 
-//size_t	init_stack_a(t_stack **a, char *argv[], int argc)
-//{
-//	size_t	argv_index;
-//
-//	argv_index = 1;
-//
-//	while
-//}
 
 t_stack_data	*init_stacks_struct(void)
 {
-	// not working
 	t_stack_data	*set;
 
 	set = malloc(sizeof(t_stack_data));
@@ -77,47 +68,42 @@ t_stack_data	*init_stacks_struct(void)
 	set->stack_b = NULL;
 	return (set);
 }
-// not working
 
-t_stack	*init_stack_a(char *argv[], int argc)
+
+t_stack	*init_stack_a(char *argv[])
 {
 	t_stack		*stack_a;
 	char		**input_array;
 
-	input_array = argv + 1;
+//	input_array = argv + 1;
+	input_array = argv;
 
-//	while (argv_index < argc)
-//	{
-//		stack_a = insert_stack(&stack_a, ft_atoi(argv[argv_index]));
-//	}
+	stack_a = create_list(input_array);
 
-	stack_a = create_list(input_array, argc);
-    printf("hallo bin ich hier");
 	return (stack_a);
 }
-// not working
 
-t_stack	*create_list(char **input_array, int argc)
+
+t_stack	*create_list(char **input_array)
 {
 	size_t			index;
 	t_stack			*stack_a;
 
-    stack_a = NULL;
+	stack_a = NULL;
 
 	index = 0;
-    printf("currently insert value %s\n", input_array[0]);
-    printf("currently insert value %s\n", input_array[1]);
-    printf("currently insert value %s\n", input_array[2]);
-    printf("argc %d\n", argc);
-	while (index < argc - 1 )
+//	printf("currently insert value %s\n", input_array[0]);
+//	printf("currently insert value %s\n", input_array[1]);
+//	printf("currently insert value %s\n", input_array[2]);
+//	printf("argc %d\n", argc);
+	while (input_array[index])
 	{
-        printf("Inserting element %d\n", ft_atoi(input_array[index]));
-        insert_stack(&stack_a, ft_atoi(input_array[index]));
-        printf("index pre incrementation %d\n", index);
+		printf("Inserting element %zu\n", ft_atoi(input_array[index]));
+		insert_stack(&stack_a, ft_atoi(input_array[index]));
+		printf("index pre incrementation %zu\n", index);
 		index++;
-        printf("index after incrementation %d\n", index);
+		printf("index after incrementation %zu\n", index);
 	}
-    printf("hallo bin ich hier ub create list");
 	return (stack_a);
 }
 //int	old main(void)

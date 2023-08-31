@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-bool	is_valid_input(char *argv[], int size)
+bool	is_valid_input(char *argv[], size_t size)
 {
 	size_t	index;
 
@@ -59,7 +59,7 @@ bool	is_valid_number(char *str_nbr)
 	return (true);
 }
 
-bool	is_not_a_duplicate(char *argv[], int size)
+bool	is_not_a_duplicate(char *argv[], size_t size)
 {
 	size_t	outer_index;
 	size_t	inner_index;

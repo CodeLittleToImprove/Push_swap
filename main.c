@@ -15,25 +15,26 @@
 int	main(int argc, char *argv[])
 {
 	t_stack_data	*set;
+	size_t			size;
+	char			**cleaned_input;
 
 	if (argc <= 1)
 		return (1);
 
+	if (argc == 2)
+		argv = ft_split(argv[1], ' ');
+	else
+		argv = argv + 1;
+	size = argc - 1;
 
-	if (is_valid_input(argv, argc - 1) == true)
+
+	if (is_valid_input(argv, size) == true)
 	{
-//		if (argc == 2)
-//			argv = ft_split(argv[1], ' ');
+
 		set = init_stacks_struct();
 		if (!set)
 			return (1);
-		set->stack_a = init_stack_a(argv, argc);
-
-//		while (argv_index < argc)
-//		{
-//			insert_stack(&a, ft_atoi(argv[argv_index]));
-//			argv_index++;
-//		}
+		set->stack_a = init_stack_a(argv);
 		printf("Nodes written\n");
 		// test if node are written correct
 //		test = a;
@@ -46,6 +47,7 @@ int	main(int argc, char *argv[])
 //				printf("Content is NULL \n");
 //			test = test->next;
 //		}
+		print_stack(set->stack_a);
 	}
 	else
 	{
