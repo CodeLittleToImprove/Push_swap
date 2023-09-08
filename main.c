@@ -18,6 +18,8 @@ int	main(int argc, char *argv[])
 	size_t			size;
 //	char			**cleaned_input;
 
+// program can't handle "1 3 5 3321312 -34133121 12312312" "6"
+	printf("argc = %d\n", argc);
 	if (argc <= 1)
 		return (1);
 
@@ -51,7 +53,7 @@ int	main(int argc, char *argv[])
 	}
 	else
 	{
-
+		printf("else case in main \n");
 //		ft_free_array(argv);
 
 	}
