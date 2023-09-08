@@ -16,7 +16,7 @@ int	main(int argc, char *argv[])
 {
 	t_stack_data	*set;
 	size_t			size;
-	char			**cleaned_input;
+//	char			**cleaned_input;
 
 	if (argc <= 1)
 		return (1);

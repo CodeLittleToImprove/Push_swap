@@ -65,12 +65,12 @@ bool	is_not_a_duplicate(char *argv[], size_t size)
 	size_t	inner_index;
 	size_t	max_int_len;
 
-	outer_index = 1;
+	outer_index = 0;
 	max_int_len = 20;
 	while (outer_index < size -1)
 	{
 		inner_index = outer_index + 1;
-		while (inner_index <= size)
+		while (inner_index < size)
 		{
 			if (ft_strncmp(argv[outer_index], argv[inner_index],
 					max_int_len) == 0)
