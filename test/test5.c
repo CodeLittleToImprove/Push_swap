@@ -119,7 +119,8 @@ int    main(int argc, char *argv[])
 				"2",
 				"12"
 		};
-		argv = manualArgs;
+		set->stack_a = init_stack_a(manualArgs);
 	}
-	set->stack_a = init_stack_a(argv);
+	else
+		set->stack_a = init_stack_a(argv);
 }

@@ -20,7 +20,7 @@ void	print_stack(t_stack *stack)
 	current = stack;
 	index = 0;
 
-	while (current->next != NULL)
+	while (current != NULL)
 	{
 		printf("Element[%zu] is %d\n", index, *current->content);
 		current = current->next;
