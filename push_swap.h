@@ -32,7 +32,7 @@ typedef struct s_stack_data_set
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-}	t_stack_data;
+}	t_stack_data_set;
 
 //input_validation
 bool				is_valid_input(char *argv[], size_t size);
@@ -45,7 +45,7 @@ bool				is_not_a_duplicate(char *argv[], size_t size);
 void				ft_free_array(char *array[]);
 
 //stack_initialization
-t_stack_data		*init_stacks_struct(void);
+t_stack_data_set		*init_stacks_struct(void);
 t_stack				*init_stack_a(char *argv[]);
 t_stack				*create_list(char **input_array);
 void				insert_stack(t_stack **root, int value);

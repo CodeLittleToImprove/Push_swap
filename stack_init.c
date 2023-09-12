@@ -62,11 +62,11 @@ void	insert_stack(t_stack **root, int value)
 }
 
 
-t_stack_data	*init_stacks_struct(void)
+t_stack_data_set	*init_stacks_struct(void)
 {
-	t_stack_data	*set;
+	t_stack_data_set	*set;
 
-	set = malloc(sizeof(t_stack_data));
+	set = malloc(sizeof(t_stack_data_set));
 	if (!set)
 		return (NULL);
 	set->stack_a = NULL;

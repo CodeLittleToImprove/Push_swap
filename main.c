@@ -14,11 +14,11 @@
 // not working
 int	main(int argc, char *argv[])
 {
-	t_stack_data	*set;
+	t_stack_data_set	*set;
 	size_t			size;
 //	char			**cleaned_input;
 
-// program can't handle "1 3 5 3321312 -34133121 12312312" "6"
+// next step check if elements are already sorted
 	printf("argc = %d\n", argc);
 	if (argc <= 1)
 		return (1);
