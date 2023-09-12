@@ -18,7 +18,7 @@ int	main(int argc, char *argv[])
 	size_t			size;
 //	char			**cleaned_input;
 
-// next step check if elements are already sorted
+// next step check check if number is toobig if elements are already sorted
 	printf("argc = %d\n", argc);
 	if (argc <= 1)
 		return (1);
