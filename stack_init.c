@@ -80,7 +80,7 @@ t_stack	*init_stack_a(char *argv[])
 	t_stack		*stack_a;
 	char		**input_array;
 
-//	input_array = argv + 1;
+
 	input_array = argv;
 
 	stack_a = create_list(input_array);
@@ -105,6 +105,8 @@ t_stack	*create_list(char **input_array)
 	{
 		printf("Inserting element %d\n", ft_atoi(input_array[index]));
 		insert_stack(&stack_a, ft_atoi(input_array[index]));
+		if (!stack_a)
+			return (NULL);
 //		printf("index pre incrementation %zu\n", index);
 		index++;
 //		printf("index after incrementation %zu\n", index);

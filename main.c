@@ -18,7 +18,7 @@ int	main(int argc, char *argv[])
 	size_t			size;
 //	char			**cleaned_input;
 
-// next step check check if number is toobig if elements are already sorted
+// implement operations
 	printf("argc = %d\n", argc);
 	if (argc <= 1)
 		return (1);
@@ -55,7 +55,7 @@ int	main(int argc, char *argv[])
 	{
 		printf("else case in main \n");
 //		ft_free_array(argv);
-
+		return (write(STDERR_FILENO, "Error\n", 6));
 	}
 
 	return (0);
