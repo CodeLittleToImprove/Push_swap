@@ -20,6 +20,7 @@
 # include <stdbool.h>
 # include <ctype.h>
 # include <string.h>
+# include <limits.h>
 
 typedef struct s_stack
 {
@@ -39,7 +40,8 @@ bool				is_valid_input(char *argv[], size_t size);
 bool				is_valid_start_character(char c);
 bool				is_valid_digit(char c);
 bool				is_valid_number(char *str_nbr);
-bool				is_not_a_duplicate(char *argv[], size_t size);
+bool				is_valid_int_string(char *str_nbr);
+bool				is_array_not_a_duplicate(char *argv[], size_t size);
 
 //error handling
 void				ft_free_array(char *array[]);
@@ -49,6 +51,9 @@ t_stack_data_set		*init_stacks_struct(void);
 t_stack				*init_stack_a(char *argv[]);
 t_stack				*create_list(char **input_array);
 void				insert_stack(t_stack **root, int value);
+
+//utils.c
+long long	ft_atoll(const char *nptr);
 
 //test utils
 void				print_stack(t_stack *stack);

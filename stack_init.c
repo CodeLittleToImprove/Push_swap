@@ -40,9 +40,9 @@ void	insert_stack(t_stack **root, int value)
 		*root = new_node;
 		return ;
 	}
-	printf("current pointer value before setting root: %p\n", (void *)current);
+//	printf("current pointer value before setting root: %p\n", (void *)current);
 	current = *root;
-	printf("current pointer value after setting root: %p\n", (void *)current);
+//	printf("current pointer value after setting root: %p\n", (void *)current);
 	if (current == NULL)
 	{
 //		printf("I am hopefully not here");
@@ -103,7 +103,7 @@ t_stack	*create_list(char **input_array)
 //	printf("argc %d\n", argc);
 	while (input_array[index])
 	{
-		printf("Inserting element %zu\n", ft_atoi(input_array[index]));
+		printf("Inserting element %d\n", ft_atoi(input_array[index]));
 		insert_stack(&stack_a, ft_atoi(input_array[index]));
 //		printf("index pre incrementation %zu\n", index);
 		index++;

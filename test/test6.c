@@ -1,49 +1,44 @@
 #include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include <ctype.h>  // For isdigit() function
-#include <string.h> // For strlen() function
+#include <limits.h>
 
-bool is_valid_input(const char *input) {
-	int length = strlen(input);
-	int i = 0;
+long long    ft_atoll(const char *nptr)
+{
+    long long        nbr;
+    int        sign;
 
-	// Check for quotes at the beginning and end
-	if (length < 2 || input[0] != '"' || input[length - 1] != '"') {
-		return false;
-	}
+    nbr = 0;
+    sign = 1;
+    while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
+        nptr++;
+    if (*nptr == '-')
+        sign = -1;
+    if (*nptr == '+' || *nptr == '-')
+        nptr++;
+    while (*nptr >= '0' && *nptr <= '9')
+    {
+        if ((nbr > LLONG_MAX / 10) || (nbr == LLONG_MAX / 10 ))
+        {
+            if (sign == -1)
+                return (LLONG_MIN);
+            else
+            {
+                printf("else if\n");
+                return (LLONG_MAX);
+            }
 
-	// Skip the opening quote
-	i++;
-
-	while (i < length - 1) {
-		if (input[i] == ' ' && input[i - 1] == ' ') {
-			// Disallow consecutive spaces
-			return false;
-		} else if (!isdigit(input[i]) && !(input[i] == '-' && (i == 1 || input[i - 1] == ' '))) {
-			// Check if the character is a digit or a minus sign for negative numbers
-			return false;
-		}
-		i++;
-	}
-
-	return true;
+        }
+        nbr = nbr * 10 + *nptr - '0';
+        printf("%lld\n", nbr);
+        nptr++;
+    }
+    return (sign * nbr);
 }
+int main() {
+    const char *str1 = "9223372036854775809";  // A very large number
 
-int main(int argc, char *argv[]) {
-	if (argc != 2) {
-		printf("Usage: %s <input>\n", argv[0]);
-		return 1;
-	}
+    long long num1 = ft_atoll(str1);
 
-	if (is_valid_input(argv[1])) {
-		printf("Input is valid.\n");
-	} else {
-		printf("Error: Invalid input format.\n");
-		return 2; // Return an error code
-	}
+    printf("num1 = %lld\n", num1);
 
-	// Your push_swap logic here...
-
-	return 0;
+    return 0;
 }
