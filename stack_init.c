@@ -84,6 +84,7 @@ t_stack	*init_stack_a(char *argv[])
 	input_array = argv;
 
 	stack_a = create_list(input_array);
+//	ft_free_array(input_array);
 
 	return (stack_a);
 }

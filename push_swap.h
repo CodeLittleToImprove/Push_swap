@@ -53,8 +53,12 @@ t_stack				*create_list(char **input_array);
 void				insert_stack(t_stack **root, int value);
 
 //utils.c
-long long	ft_atoll(const char *nptr);
+long long			ft_atoll(const char *nptr);
 
 //test utils
 void				print_stack(t_stack *stack);
+
+//linked_list_utils
+void				stack_node_delete(t_stack **lst);
+void				stack_clear(t_stack **stack);
 #endif

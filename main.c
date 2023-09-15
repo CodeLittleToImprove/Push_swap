@@ -37,7 +37,15 @@ int	main(int argc, char *argv[])
 		if (!set)
 			return (1);
 		set->stack_a = init_stack_a(argv);
+		if (argc == 2)
+			ft_free_array(argv);
 		printf("Nodes successful written\n");
+//		stack_clear(&set);
+//		if (set == NULL) {
+//			printf("The linked list has been cleared and is now empty.\n");
+//		} else {
+//			printf("The linked list still contains elements.\n");
+//		}
 		// test if node are written correct
 //		test = a;
 //		while (test != NULL)
@@ -50,6 +58,14 @@ int	main(int argc, char *argv[])
 //			test = test->next;
 //		}
 		print_stack(set->stack_a);
+		stack_clear(&set->stack_a);
+
+
+		if (set->stack_a == NULL)
+			printf("The linked list has been cleared and is now empty.\n");
+		else
+			printf("The linked list still contains elements.\n");
+		print_stack(set->stack_a);
 	}
 	else
 	{
@@ -57,6 +73,6 @@ int	main(int argc, char *argv[])
 //		ft_free_array(argv);
 		return (write(STDERR_FILENO, "Error\n", 6));
 	}
-
+	free(set);
 	return (0);
 }

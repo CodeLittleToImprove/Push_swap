@@ -21,7 +21,7 @@ LIBFT			= libft
 
 SRCDIR			= srcs
 
-SRCS			= main.c input_validation.c error_handler.c stack_init.c test_utils.c
+SRCS			= main.c input_validation.c error_handler.c stack_init.c test_utils.c utils.c linked_list_utils.c
 
 OBJS			= ${SRCS:.c=.o}
 
@@ -34,7 +34,7 @@ CC				= cc
 
 CFLAGS			= -Wall -Wextra -Werror
 
-
+debug: CFLAGS += -g
 # Commands
 
 RM				= rm -f
@@ -53,6 +53,8 @@ run:			all
 				./$(NAME)
 
 
+
+debug: all
 clean:
 				${RM} ${OBJS}
 				make clean -C ${LIBFT}

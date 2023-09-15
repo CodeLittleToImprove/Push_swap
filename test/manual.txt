@@ -1,0 +1,1 @@
+valgrind --leak-check=full --show-leak-kinds=all ./push_swap "6 2 4"

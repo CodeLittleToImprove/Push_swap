@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_utils.c                                       :+:      :+:    :+:   */
+/*   linked_list_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbui-quo <tbui-quo@student.42wolfsburg.d>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 16:49:55 by tbui-quo          #+#    #+#             */
-/*   Updated: 2023/08/31 16:55:39 by tbui-quo         ###   ########.fr       */
+/*   Created: 2023/09/15 17:59:06 by tbui-quo          #+#    #+#             */
+/*   Updated: 2023/09/15 18:00:47 by tbui-quo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_stack(t_stack *stack)
+void	stack_node_delete(t_stack **lst)
 {
-	t_stack		*current;
-	size_t		index;
+	t_stack	*temp;
 
-	current = stack;
-	index = 0;
+	if (*lst == NULL)
+		return ;
 
-	if (current == NULL)
-		printf("current is null\n");
 
-	while (current != NULL)
+	temp = *lst;
+	*lst = (*lst)->next;
+	free(temp->content);
+	free(temp);
+}
+
+void	stack_clear(t_stack **stack)
+{
+	while (*stack != NULL)
 	{
-		printf("Element[%zu] is %d\n", index, *current->content);
-		current = current->next;
-		index++;
+		stack_node_delete(stack);
 	}
-
+	stack = NULL;
 }
