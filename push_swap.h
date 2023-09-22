@@ -61,4 +61,7 @@ void				print_stack(t_stack *stack);
 //linked_list_utils
 void				stack_node_delete(t_stack **lst);
 void				stack_clear(t_stack **stack);
+
+//push_command.c
+
 #endif

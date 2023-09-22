@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_handler.c                                    :+:      :+:    :+:   */
+/*   push_command.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbui-quo <tbui-quo@student.42wolfsburg.d>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 16:05:18 by tbui-quo          #+#    #+#             */
-/*   Updated: 2023/08/23 16:05:18 by tbui-quo         ###   ########.fr       */
+/*   Created: 2023/09/22 20:17:33 by tbui-quo          #+#    #+#             */
+/*   Updated: 2023/09/22 20:17:33 by tbui-quo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_free_array(char *array[])
+void	push(t_stack **dest, t_stack **src)
 {
-	size_t	i;
+	t_stack *node_to_push;
 
-	i = 0;
-	while (array[i])
+	if (*src == NULL)
+		return;
+	node_to_push = *src;
+	*src = (*src)->next;
+	if (*dest == NULL) {
+		*dest = node_to_push;
+		node_to_push->next = NULL;
+	} else
 	{
-		free(array[i]);
-		i++;
+		node_to_push->next = *dest;
 	}
-	free(array);
+	// maybe need to add check if there is a next element otherwise set next to Null?
 }
-
-// maybe not needed
-void	ft_free_linked_list(t_stack *root)
-{
-	t_stack	*current;
-	t_stack	*temp;
-
-	current = root;
-	while (current != NULL)
+	void	pa(t_stack **a, t_stack**b)
 	{
-		temp = current;
-		current = current->next;
-		free(temp->content);
-		free(temp);
+		push(a, b);
 	}
-}
+
+	void	pb(t_stack**b, t_stack **a)
+	{
+		push(b, a);
+	}
