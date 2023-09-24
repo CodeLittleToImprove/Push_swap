@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+// maybe don't malloc content change to be a normal int
+// this has 2 step in one malloc and inserting a value , it would be cleaner if I do one in each  functionstep
 void	insert_stack(t_stack **root, int value)
 {
 	t_stack	*new_node;
@@ -20,10 +21,8 @@ void	insert_stack(t_stack **root, int value)
 	new_node = malloc(sizeof(t_stack));
 	if (new_node == NULL)
 	{
-		perror("Error allocating memory for new node");
 		exit(1);
 	}
-//	printf("Allocated memory for new node at address: %p\n", (void *)new_node);
 	new_node->content = malloc(sizeof(int));
 	if (new_node->content == NULL)
 	{
@@ -31,34 +30,18 @@ void	insert_stack(t_stack **root, int value)
 		exit(1);
 	}
 	*(new_node->content) = value;
-
 	new_node->next = NULL;
-
 	if (*root == NULL)
-	{
-//		printf("Should happen only once \n");
 		*root = new_node;
-		return ;
-	}
-//	printf("current pointer value before setting root: %p\n", (void *)current);
-	current = *root;
-//	printf("current pointer value after setting root: %p\n", (void *)current);
-	if (current == NULL)
+	else
 	{
-//		printf("I am hopefully not here");
-		perror("Error: Attempted to insert into an empty stack");
-		exit(1);
+		current = *root;
+		while (current->next != NULL)
+		{
+			current = current->next;
+		}
+		current->next = new_node;
 	}
-//	if (current->next == NULL)
-	printf("Traversing the list:\n");
-	while (current->next != NULL)
-	{
-		printf("current pointer value before setting next: %p\n", (void *)current);
-		current = current->next;
-		printf("current pointer value after setting next: %p\n", (void *)current);
-	}
-	printf("Adding new node at the end:\n");
-	current->next = new_node;
 }
 
 

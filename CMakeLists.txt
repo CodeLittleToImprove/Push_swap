@@ -4,7 +4,8 @@ project(push_swap C)
 set(CMAKE_C_STANDARD 99)
 
 # Add the library file
-add_library(libft STATIC IMPORTED)
+add_library(libft STATIC IMPORTED
+        test/test8.c)
 set_target_properties(libft PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libft/libft.a)
 
 add_executable(push_swap
