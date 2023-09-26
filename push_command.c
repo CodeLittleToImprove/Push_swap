@@ -27,14 +27,13 @@ void	push(t_stack **dest, t_stack **src)
 	{
 		node_to_push->next = *dest;
 	}
-	// maybe need to add check if there is a next element otherwise set next to Null?
 }
-	void	pa(t_stack **a, t_stack**b)
+	void	pa(t_stack **a, t_stack **b)
 	{
 		push(a, b);
 	}
 
-	void	pb(t_stack**b, t_stack **a)
+	void	pb(t_stack **b, t_stack **a)
 	{
 		push(b, a);
 	}
