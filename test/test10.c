@@ -101,44 +101,75 @@ void	swap(t_stack **stack_x)
 {
 	t_stack	*first_element;
 	t_stack	*second_element;
-	t_stack *temp;
 
 	first_element = NULL;
 	second_element = NULL;
-	temp = NULL;
 	if (*stack_x == NULL || (*stack_x)->next == NULL)
 		return;
 	first_element = (*stack_x);
 	second_element = (*stack_x) ->next;
-	temp = second_element;
+	first_element->next = second_element ->next;
+	second_element->next = first_element;
+	*stack_x = second_element;
 
-//	printf("First element: %d\n", *(*stack_x)->content);
-//	*stack_x = (*stack_x) ->next;
-//	printf("First element: %d\n", *first_element->content);
-//	printf("Second element: %d\n", *second_element->content);
-//	printf("Temp element: %d\n", *temp->content);
-	first_element = (*stack_x) ->next;
-	second_element = (*stack_x);
-	*stack_x = temp;
-	second_element->next = first_element->next;
-//	printf("First element: %d\n", *first_element->content);
-//	printf("Second element: %d\n", *second_element->content);
-//	printf("Temp element: %d\n", *temp->content);
-//	*stack_x = (*stack_x)->next;
-//	printf("Third element: %d\n", *(*stack_x)->content);
-	free(temp);
+}
+
+void	sa(t_stack **stack_a)
+{
+	swap(stack_a);
+}
+
+void	sb(t_stack **stack_b)
+{
+	swap(stack_b);
+}
+
+void	ss(t_stack **stack_a, t_stack **stack_b)
+{
+	swap(stack_a);
+	swap(stack_b);
+}
+
+void	print_stack(t_stack *stack)
+{
+	t_stack		*current;
+	size_t		index;
+
+	current = stack;
+	index = 0;
+
+	if (current == NULL)
+		printf("current is null\n");
+
+	while (current != NULL)
+	{
+		printf("Element[%zu] is %d\n", index, *current->content);
+		current = current->next;
+		index++;
+	}
+
 }
 
 int    main(void)
 {
 	t_stack_data_set    *set;
 	char *argv[] = {"5", "1", "6",'\0'};
+	char *argv2[] = {"9", "8", "6",'\0'};
 	set = init_stacks_struct();
 	if (!set)
 		return (1);
 	set->stack_a = init_stack_a(argv);
-	swap(&set->stack_a);
-
+	set->stack_b = init_stack_a(argv2);
+	ss(&set->stack_a, &set->stack_b);
+	print_stack(set->stack_a);
+	printf("StackA printed \n");
+	print_stack(set->stack_b);
+	printf("StackB printed \n");
+	ss(&set->stack_a, &set->stack_b);
+	print_stack(set->stack_a);
+	printf("StackA printed \n");
+	print_stack(set->stack_b);
+	printf("StackB printed \n");
 	free(set);
 	return (0);
 }

@@ -16,21 +16,17 @@ void	swap(t_stack **stack_x)
 {
 	t_stack	*first_element;
 	t_stack	*second_element;
-	t_stack *temp;
 
 	first_element = NULL;
 	second_element = NULL;
-	temp = NULL;
 	if (*stack_x == NULL || (*stack_x)->next == NULL)
 		return;
 	first_element = (*stack_x);
 	second_element = (*stack_x) ->next;
-	temp = second_element;
-	first_element = second_element;
-	second_element = (*stack_x);
-	*stack_x = temp;
-	//maybe free temp
-	// I think pointer a broken
+	first_element->next = second_element ->next;
+	second_element->next = first_element;
+	*stack_x = second_element;
+
 }
 
 void	sa(t_stack **stack_a)

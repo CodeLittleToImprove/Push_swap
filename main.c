@@ -58,14 +58,18 @@ int	main(int argc, char *argv[])
 //			test = test->next;
 //		}
 		print_stack(set->stack_a);
-		stack_clear(&set->stack_a);
-
-
-		if (set->stack_a == NULL)
-			printf("The linked list has been cleared and is now empty.\n");
-		else
-			printf("The linked list still contains elements.\n");
+		swap(&set->stack_a);
+		printf("swap done\n");
 		print_stack(set->stack_a);
+
+//		stack_clear(&set->stack_a);
+
+
+//		if (set->stack_a == NULL)
+//			printf("The linked list has been cleared and is now empty.\n");
+//		else
+//			printf("The linked list still contains elements.\n");
+//		print_stack(set->stack_a);
 	}
 	else
 	{

@@ -63,5 +63,14 @@ void				stack_node_delete(t_stack **lst);
 void				stack_clear(t_stack **stack);
 
 //push_command.c
+void				push(t_stack **dest, t_stack **src);
+void				pa(t_stack **a, t_stack **b);
+void				pb(t_stack **b, t_stack **a);
 
+
+//swap_command.c
+void				swap(t_stack **stack_x);
+void				sa(t_stack **stack_a);
+void				sb(t_stack **stack_b);
+void				ss(t_stack **stack_a, t_stack **stack_b);
 #endif
