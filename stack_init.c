@@ -15,9 +15,10 @@
 // this has 2 step in one malloc and inserting a value , it would be cleaner if I do one in each  functionstep
 void	insert_stack(t_stack **root, int value)
 {
-	t_stack	*new_node;
 	t_stack	*current;
+	t_stack	*new_node;
 
+	current = NULL;
 	new_node = malloc(sizeof(t_stack));
 	if (new_node == NULL)
 	{
@@ -37,9 +38,7 @@ void	insert_stack(t_stack **root, int value)
 	{
 		current = *root;
 		while (current->next != NULL)
-		{
 			current = current->next;
-		}
 		current->next = new_node;
 	}
 }

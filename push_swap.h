@@ -67,10 +67,14 @@ void				push(t_stack **dest, t_stack **src);
 void				pa(t_stack **a, t_stack **b);
 void				pb(t_stack **b, t_stack **a);
 
-
 //swap_command.c
 void				swap(t_stack **stack_x);
 void				sa(t_stack **stack_a);
 void				sb(t_stack **stack_b);
 void				ss(t_stack **stack_a, t_stack **stack_b);
+
+//rotate_command
+void				rotate(t_stack **stack_x);
+void				ra(t_stack **stack_a);
+void				rb(t_stack **stack_b);
 #endif

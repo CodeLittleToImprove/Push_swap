@@ -57,9 +57,13 @@ int	main(int argc, char *argv[])
 //				printf("Content is NULL \n");
 //			test = test->next;
 //		}
+//		print_stack(set->stack_a);
+//		swap(&set->stack_a);
+//		printf("swap done\n");
+//		print_stack(set->stack_a);
 		print_stack(set->stack_a);
-		swap(&set->stack_a);
-		printf("swap done\n");
+		rotate(&set->stack_a);
+		printf("rotate done\n");
 		print_stack(set->stack_a);
 
 //		stack_clear(&set->stack_a);

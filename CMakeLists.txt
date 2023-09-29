@@ -15,9 +15,11 @@ add_executable(push_swap
         error_handler.c
         stack_init.c
         test_utils.c
-        utils.c linked_list_utils.c
+        utils.c
+        linked_list_utils.c
         push_command.c
-        swap_command.c)
+        swap_command.c
+        rotate_command.c)
 
 # Link the executable with the libft library
 target_link_libraries(push_swap libft)
