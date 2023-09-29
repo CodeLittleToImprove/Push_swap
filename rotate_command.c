@@ -18,9 +18,8 @@ void	rotate(t_stack **stack_x)
 	t_stack	*second_element;
 	t_stack *new_first_element;
 
-	if (*stack_x == NULL || (*stack_x)->next == NULL) {
+	if (*stack_x == NULL || (*stack_x)->next == NULL)
 		return;
-	}
 	first_element = *stack_x;
 	second_element = first_element->next;
 	new_first_element = second_element;
@@ -28,7 +27,7 @@ void	rotate(t_stack **stack_x)
 	while (second_element->next != NULL)
 		second_element = second_element->next;
 	second_element->next = first_element;
-	*stack_x =new_first_element;
+	*stack_x = new_first_element;
 }
 
 void	ra(t_stack **stack_a)
@@ -38,5 +37,11 @@ void	ra(t_stack **stack_a)
 
 void	rb(t_stack **stack_b)
 {
+	rotate(stack_b);
+}
+
+void	rr(t_stack **stack_a, t_stack **stack_b)
+{
+	rotate(stack_a);
 	rotate(stack_b);
 }

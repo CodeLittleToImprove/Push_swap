@@ -77,4 +77,11 @@ void				ss(t_stack **stack_a, t_stack **stack_b);
 void				rotate(t_stack **stack_x);
 void				ra(t_stack **stack_a);
 void				rb(t_stack **stack_b);
+void				rr(t_stack **stack_a, t_stack **stack_b);
+
+//reverse_rotate_command
+void				reverse_rotate(t_stack **stack_x);
+void				rra(t_stack **stack_a);
+void				rrb(t_stack **stack_b);
+void				rrr(t_stack **stack_a, t_stack **stack_b);
 #endif

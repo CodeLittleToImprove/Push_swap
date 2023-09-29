@@ -109,6 +109,12 @@ build CMakeFiles/push_swap.dir/rotate_command.c.o: C_COMPILER__push_swap_unscann
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
 
+build CMakeFiles/push_swap.dir/reverse_rotate_command.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/reverse_rotate_command.c || cmake_object_order_depends_target_push_swap
+  DEP_FILE = CMakeFiles/push_swap.dir/reverse_rotate_command.c.o.d
+  FLAGS = -g -std=gnu99 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/push_swap.dir
+  OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target push_swap
@@ -117,7 +123,7 @@ build CMakeFiles/push_swap.dir/rotate_command.c.o: C_COMPILER__push_swap_unscann
 #############################################
 # Link the executable push_swap
 
-build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/input_validation.c.o CMakeFiles/push_swap.dir/main.c.o CMakeFiles/push_swap.dir/error_handler.c.o CMakeFiles/push_swap.dir/stack_init.c.o CMakeFiles/push_swap.dir/test_utils.c.o CMakeFiles/push_swap.dir/utils.c.o CMakeFiles/push_swap.dir/linked_list_utils.c.o CMakeFiles/push_swap.dir/push_command.c.o CMakeFiles/push_swap.dir/swap_command.c.o CMakeFiles/push_swap.dir/rotate_command.c.o | /home/kunel/CLionProjects/push_swap/libft/libft.a
+build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/input_validation.c.o CMakeFiles/push_swap.dir/main.c.o CMakeFiles/push_swap.dir/error_handler.c.o CMakeFiles/push_swap.dir/stack_init.c.o CMakeFiles/push_swap.dir/test_utils.c.o CMakeFiles/push_swap.dir/utils.c.o CMakeFiles/push_swap.dir/linked_list_utils.c.o CMakeFiles/push_swap.dir/push_command.c.o CMakeFiles/push_swap.dir/swap_command.c.o CMakeFiles/push_swap.dir/rotate_command.c.o CMakeFiles/push_swap.dir/reverse_rotate_command.c.o | /home/kunel/CLionProjects/push_swap/libft/libft.a
   FLAGS = -g
   LINK_LIBRARIES = /home/kunel/CLionProjects/push_swap/libft/libft.a
   OBJECT_DIR = CMakeFiles/push_swap.dir

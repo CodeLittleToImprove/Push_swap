@@ -62,7 +62,7 @@ int	main(int argc, char *argv[])
 //		printf("swap done\n");
 //		print_stack(set->stack_a);
 		print_stack(set->stack_a);
-		rotate(&set->stack_a);
+		rra(&set->stack_a);
 		printf("rotate done\n");
 		print_stack(set->stack_a);
 
