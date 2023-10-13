@@ -50,20 +50,4 @@ int	lst_len(t_stack **lst)
 	return (lst_len);
 }
 
-bool	is_sorted(t_stack **lst)
-{
-	t_stack	*current;
-	int	*num1;
-	int *num2;
 
-	current = *lst;
-	while (current->next)
-	{
-		num1 = (int *)(current->content);
-		num2 = (int *)(current->next->content);
-		if (num1 > num2)
-			return (false);
-		current = current->next;
-	}
-	return (true);
-}

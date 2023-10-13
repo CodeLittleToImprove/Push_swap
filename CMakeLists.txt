@@ -20,7 +20,8 @@ add_executable(push_swap
         push_command.c
         swap_command.c
         rotate_command.c
-        reverse_rotate_command.c)
+        reverse_rotate_command.c
+        sort_utils.c)
 
 # Link the executable with the libft library
 target_link_libraries(push_swap libft)

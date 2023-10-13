@@ -52,7 +52,7 @@ t_stack				*init_stack_a(char *argv[]);
 t_stack				*create_list(char **input_array);
 void				insert_stack(t_stack **root, int value);
 
-//utils.c
+//utils
 long long			ft_atoll(const char *nptr);
 
 //test utils
@@ -61,13 +61,22 @@ void				print_stack(t_stack *stack);
 //linked_list_utils
 void				stack_node_delete(t_stack **lst);
 void				stack_clear(t_stack **stack);
+int					lst_len(t_stack **lst);
 
-//push_command.c
+//sort_utils
+bool				is_sorted(t_stack **lst);
+void				sort_check(t_stack **stack_a, t_stack **stack_b);
+void				sort2(t_stack **stack_a);
+void				sort3(t_stack **stack_a);
+void				sort4(t_stack **stack_a, t_stack **stack_b);
+void				sort5(t_stack **stack_a, t_stack **stack_b);
+void				radix_sort(t_stack **stack_a, t_stack **stack_b);
+//push_command
 void				push(t_stack **dest, t_stack **src);
 void				pa(t_stack **a, t_stack **b);
 void				pb(t_stack **b, t_stack **a);
 
-//swap_command.c
+//swap_command
 void				swap(t_stack **stack_x);
 void				sa(t_stack **stack_a);
 void				sb(t_stack **stack_b);

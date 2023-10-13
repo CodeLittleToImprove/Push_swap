@@ -18,7 +18,6 @@ int	main(int argc, char *argv[])
 	size_t			size;
 //	char			**cleaned_input;
 
-// implement operations
 	printf("argc = %d\n", argc);
 	if (argc <= 1)
 		return (1);
@@ -39,6 +38,11 @@ int	main(int argc, char *argv[])
 		set->stack_a = init_stack_a(argv);
 		if (argc == 2)
 			ft_free_array(argv);
+		if (is_sorted(&set->stack_a) == true)
+		{
+			printf("all numbers are already sorted\n");
+			return (0);
+		}
 		printf("Nodes successful written\n");
 //		stack_clear(&set);
 //		if (set == NULL) {
@@ -62,9 +66,9 @@ int	main(int argc, char *argv[])
 //		printf("swap done\n");
 //		print_stack(set->stack_a);
 		print_stack(set->stack_a);
-		rra(&set->stack_a);
-		printf("rotate done\n");
-		print_stack(set->stack_a);
+//		rra(&set->stack_a);
+//		printf("rotate done\n");
+//		print_stack(set->stack_a);
 
 //		stack_clear(&set->stack_a);
 
