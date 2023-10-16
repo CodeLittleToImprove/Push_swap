@@ -50,27 +50,27 @@ int	main(int argc, char *argv[])
 //		} else {
 //			printf("The linked list still contains elements.\n");
 //		}
-		// test if node are written correct
-//		test = a;
-//		while (test != NULL)
-//		{
-//			printf("Start print\n");
-//			if (test->content != NULL)
-//				printf("%d\n", *(test->content));
-//			else
-//				printf("Content is NULL \n");
-//			test = test->next;
-//		}
+
 //		print_stack(set->stack_a);
 //		swap(&set->stack_a);
 //		printf("swap done\n");
 //		print_stack(set->stack_a);
 		print_stack(set->stack_a);
-//		rra(&set->stack_a);
-//		printf("rotate done\n");
-//		print_stack(set->stack_a);
-
-//		stack_clear(&set->stack_a);
+		printf("finished print stack_a\n");
+		pb(&set->stack_b,&set->stack_a);
+		pb(&set->stack_b,&set->stack_a);
+		printf("pb done\n");
+		print_stack(set->stack_a);
+		printf("finished print stack_a\n");
+		print_stack(set->stack_b);
+		printf("finished print stack_b\n");
+		rr(&set->stack_b,&set->stack_a);
+		printf("rr done\n");
+		print_stack(set->stack_a);
+		printf("finished print stack_a\n");
+		print_stack(set->stack_b);
+		printf("finished print stack_b\n");
+		stack_clear(&set->stack_a);
 
 
 //		if (set->stack_a == NULL)

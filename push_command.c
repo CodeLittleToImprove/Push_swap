@@ -26,6 +26,7 @@ void	push(t_stack **dest, t_stack **src)
 	} else
 	{
 		node_to_push->next = *dest;
+		*dest = node_to_push;
 	}
 }
 	void	pa(t_stack **a, t_stack **b)

@@ -36,7 +36,6 @@ void	ft_free_linked_list(t_stack *root)
 	{
 		temp = current;
 		current = current->next;
-		free(temp->content);
 		free(temp);
 	}
 }

@@ -25,7 +25,7 @@ void	print_stack(t_stack *stack)
 
 	while (current != NULL)
 	{
-		printf("Element[%zu] is %d\n", index, *current->content);
+		printf("Element[%zu] is %d\n", index, current->content);
 		current = current->next;
 		index++;
 	}

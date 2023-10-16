@@ -20,7 +20,6 @@ void	stack_node_delete(t_stack **lst)
 		return ;
 	temp = *lst;
 	*lst = (*lst)->next;
-	free(temp->content);
 	free(temp);
 }
 

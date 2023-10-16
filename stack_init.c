@@ -13,36 +13,6 @@
 #include "push_swap.h"
 // maybe don't malloc content change to be a normal int
 // this has 2 step in one malloc and inserting a value , it would be cleaner if I do one in each  functionstep
-void	insert_stack(t_stack **root, int value)
-{
-	t_stack	*current;
-	t_stack	*new_node;
-
-	current = NULL;
-	new_node = malloc(sizeof(t_stack));
-	if (new_node == NULL)
-	{
-		exit(1);
-	}
-	new_node->content = malloc(sizeof(int));
-	if (new_node->content == NULL)
-	{
-		free(new_node);
-		exit(1);
-	}
-	*(new_node->content) = value;
-	new_node->next = NULL;
-	if (*root == NULL)
-		*root = new_node;
-	else
-	{
-		current = *root;
-		while (current->next != NULL)
-			current = current->next;
-		current->next = new_node;
-	}
-}
-
 
 t_stack_data_set	*init_stacks_struct(void)
 {
@@ -71,6 +41,29 @@ t_stack	*init_stack_a(char *argv[])
 	return (stack_a);
 }
 
+void	insert_stack(t_stack **root, int value)
+{
+	t_stack	*current;
+	t_stack	*new_node;
+
+	current = NULL;
+	new_node = malloc(sizeof(t_stack));
+	if (new_node == NULL)
+	{
+		exit(1);
+	}
+	new_node->content = value;
+	new_node->next = NULL;
+	if (*root == NULL)
+		*root = new_node;
+	else
+	{
+		current = *root;
+		while (current->next != NULL)
+			current = current->next;
+		current->next = new_node;
+	}
+}
 
 t_stack	*create_list(char **input_array)
 {

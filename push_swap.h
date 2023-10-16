@@ -24,7 +24,7 @@
 
 typedef struct s_stack
 {
-	int							*content;
+	int							content;
 	struct s_stack				*next;
 //	struct s_stack			*prev;
 }	t_stack;
