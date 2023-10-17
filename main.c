@@ -57,19 +57,9 @@ int	main(int argc, char *argv[])
 //		print_stack(set->stack_a);
 		print_stack(set->stack_a);
 		printf("finished print stack_a\n");
-		pb(&set->stack_b,&set->stack_a);
-		pb(&set->stack_b,&set->stack_a);
-		printf("pb done\n");
+		sort_check(&set->stack_a, &set->stack_b);
+		printf("after_sort3\n");
 		print_stack(set->stack_a);
-		printf("finished print stack_a\n");
-		print_stack(set->stack_b);
-		printf("finished print stack_b\n");
-		rr(&set->stack_b,&set->stack_a);
-		printf("rr done\n");
-		print_stack(set->stack_a);
-		printf("finished print stack_a\n");
-		print_stack(set->stack_b);
-		printf("finished print stack_b\n");
 		stack_clear(&set->stack_a);
 
 

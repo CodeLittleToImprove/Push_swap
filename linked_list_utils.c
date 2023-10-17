@@ -49,4 +49,58 @@ int	lst_len(t_stack **lst)
 	return (lst_len);
 }
 
+int	is_max(t_stack **stack_a)
+{
+	t_stack		*root;
+	int			max;
+
+	root = *stack_a;
+//	max = root->content;
+//	while (root->next)
+//	{
+//		root = root->next;
+//		if (root->content > max)
+//			max = root->content;
+//	}
+	return (max);
+}
+// not tested
+t_stack	*get_next_min(t_stack **stack)
+{
+	t_stack		*root;
+	t_stack		*min;
+	bool		has_min;
+
+	root = *stack;
+	min = NULL;
+	has_min = false;
+	if (root)
+	{
+		while (root)
+		{
+			if ((root->index = -1) && (!has_min) || root->content < min->content)
+			{
+				min = root;
+				has_min = true;
+			}
+		root = root->next;
+		}
+	}
+	return (min);
+}
+
+//not tested
+void	index_stack(t_stack **stack)
+{
+	int			index;
+	t_stack		*root;
+
+	index = 0;
+	root = get_next_min(*stack);
+	while (root)
+	{
+		root->index = ++index;
+		root = get_next_min(*stack);
+	}
+}
 

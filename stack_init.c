@@ -53,6 +53,7 @@ void	insert_stack(t_stack **root, int value)
 		exit(1);
 	}
 	new_node->content = value;
+	new_node->index = -1;
 	new_node->next = NULL;
 	if (*root == NULL)
 		*root = new_node;

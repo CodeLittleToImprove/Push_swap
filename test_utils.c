@@ -29,5 +29,21 @@ void	print_stack(t_stack *stack)
 		current = current->next;
 		index++;
 	}
+}
 
+void	print_index(t_stack *stack)
+{
+	t_stack		*current;
+
+	current = stack;
+
+	if (current == NULL)
+		printf("current is null\n");
+
+	while (current != NULL)
+	{
+		printf("Element[%zu] is %d\n", index, current->index);
+		current = current->next;
+
+	}
 }

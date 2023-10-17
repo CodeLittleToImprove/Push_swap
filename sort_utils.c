@@ -29,16 +29,62 @@ bool	is_sorted(t_stack **lst)
 	}
 	return (true);
 }
+void	sort2(t_stack **stack_a, int stack_len)
+{
+	t_stack	*first_element;
+	t_stack	*second_element;
 
+	if (stack_len != 2)
+		return;
+	first_element = *stack_a;
+	second_element = first_element->next;
+	if (first_element->content > second_element->content)
+		sa(stack_a);
+}
+
+void	sort3(t_stack **stack_a, int stack_len)
+{
+//	t_stack	*first_element;
+//	t_stack	*second_element;
+//	t_stack *third_element;
+//
+//
+//	if (stack_len != 3)
+//		return;
+//	first_element = *stack_a;
+//	second_element = first_element->next;
+//	if (first_element->content > second_element->content)
+//		sa(stack_a);
+	int 	max;
+	if (stack_len != 3)
+		return;
+	max = is_max(*stack_a); // here is the error in is_max
+
+}
 // implement sort stuff
-//void sort_check(t_stack **stack_a, t_stack **stack_b)
-//{
-//	size_t stack_len;
-//	stack_len = lst_len(stack_a);
-//	if (stack_len == 2)
-//		sort2(stack_a);
-//	else if (stack_len == 3)
-//		sort3(stack_a);
+void sort_check(t_stack **stack_a, t_stack **stack_b)
+{
+	int stack_len;
+	stack_len = lst_len(stack_a);
+	if (stack_len == 2)
+	{
+		printf("sort2 start\n");
+		sort2(stack_a, stack_len);
+		printf("sort2 successful\n");
+	}
+	else if (stack_len == 3)
+	{
+		printf("sort3 start\n");
+		sort3(stack_a, stack_len);
+		printf("sort3 successful\n");
+	}
+
+	else
+	{
+		printf("should use radix\n");
+	}
+
+
 //	else if (stack_len == 4)
 //	{
 //		sort4(stack_a, stack_b);
@@ -51,4 +97,4 @@ bool	is_sorted(t_stack **lst)
 //	{
 //		radix_sort(stack_a, stack_b);
 //	}
-//}
+}

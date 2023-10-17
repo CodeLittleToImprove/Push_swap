@@ -26,6 +26,7 @@ typedef struct s_stack
 {
 	int							content;
 	struct s_stack				*next;
+	int 						index;
 //	struct s_stack			*prev;
 }	t_stack;
 
@@ -57,19 +58,23 @@ long long			ft_atoll(const char *nptr);
 
 //test utils
 void				print_stack(t_stack *stack);
+void				print_index(t_stack *stack);
 
 //linked_list_utils
 void				stack_node_delete(t_stack **lst);
 void				stack_clear(t_stack **stack);
 int					lst_len(t_stack **lst);
+int					is_max(t_stack **stack_a);
+t_stack				*get_next_min(t_stack **root); // not sure about this
+void				index_stack(t_stack **stack);
 
 //sort_utils
 bool				is_sorted(t_stack **lst);
 void				sort_check(t_stack **stack_a, t_stack **stack_b);
-void				sort2(t_stack **stack_a);
-void				sort3(t_stack **stack_a);
-void				sort4(t_stack **stack_a, t_stack **stack_b);
-void				sort5(t_stack **stack_a, t_stack **stack_b);
+void				sort2(t_stack **stack_a, int stack_len);
+void				sort3(t_stack **stack_a, int stack_len);
+void				sort4(t_stack **stack_a, t_stack **stack_b, int stack_len);
+void				sort5(t_stack **stack_a, t_stack **stack_b, int stack_len);
 void				radix_sort(t_stack **stack_a, t_stack **stack_b);
 //push_command
 void				push(t_stack **dest, t_stack **src);
