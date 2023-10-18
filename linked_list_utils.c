@@ -55,13 +55,14 @@ int	is_max(t_stack **stack_a)
 	int			max;
 
 	root = *stack_a;
-//	max = root->content;
-//	while (root->next)
-//	{
-//		root = root->next;
-//		if (root->content > max)
-//			max = root->content;
-//	}
+	max = root->content;
+	printf("max = %d\n", max);
+	while (root->next)
+	{
+		root = root->next;
+		if (root->content > max)
+			max = root->content;
+	}
 	return (max);
 }
 // not tested

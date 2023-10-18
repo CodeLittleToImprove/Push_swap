@@ -44,21 +44,27 @@ void	sort2(t_stack **stack_a, int stack_len)
 
 void	sort3(t_stack **stack_a, int stack_len)
 {
-//	t_stack	*first_element;
-//	t_stack	*second_element;
-//	t_stack *third_element;
-//
-//
-//	if (stack_len != 3)
-//		return;
-//	first_element = *stack_a;
-//	second_element = first_element->next;
-//	if (first_element->content > second_element->content)
-//		sa(stack_a);
-	int 	max;
+	int		max;
+
 	if (stack_len != 3)
 		return;
-	max = is_max(*stack_a); // here is the error in is_max
+	max = is_max(&*stack_a);
+	if (max == (*stack_a)->content )
+	{
+//		printf("run ra \n");
+		ra(&*stack_a);
+	}
+
+	if (max == (*stack_a)->next->content)
+	{
+//		printf("run rra \n");
+		rra(&*stack_a);
+	}
+	if ((*stack_a)->content > (*stack_a)->next->content)
+	{
+//		printf("run sa \n");
+		sa(&*stack_a);
+	}
 
 }
 // implement sort stuff
