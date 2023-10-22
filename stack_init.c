@@ -88,6 +88,7 @@ t_stack	*create_list(char **input_array)
 		index++;
 //		printf("index after incrementation %zu\n", index);
 	}
+	index_stack(&stack_a);
 	return (stack_a);
 }
 //int	old main(void)

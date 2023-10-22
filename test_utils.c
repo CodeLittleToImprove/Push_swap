@@ -34,8 +34,10 @@ void	print_stack(t_stack *stack)
 void	print_index(t_stack *stack)
 {
 	t_stack		*current;
+	size_t		index;
 
 	current = stack;
+	index = 0;
 
 	if (current == NULL)
 		printf("current is null\n");
@@ -44,6 +46,6 @@ void	print_index(t_stack *stack)
 	{
 		printf("Element[%zu] is %d\n", index, current->index);
 		current = current->next;
-
+		index++;
 	}
 }

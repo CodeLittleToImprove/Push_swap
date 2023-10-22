@@ -64,8 +64,8 @@ void				print_index(t_stack *stack);
 void				stack_node_delete(t_stack **lst);
 void				stack_clear(t_stack **stack);
 int					lst_len(t_stack **lst);
-int					is_max(t_stack **stack_a);
-t_stack				*get_next_min(t_stack **root); // not sure about this
+int					get_max_num(t_stack **stack_a);
+t_stack				*get_next_min(t_stack *root); // not sure about this
 void				index_stack(t_stack **stack);
 
 //sort_utils

@@ -49,7 +49,7 @@ int	lst_len(t_stack **lst)
 	return (lst_len);
 }
 
-int	is_max(t_stack **stack_a)
+int	get_max_num(t_stack **stack_a)
 {
 	t_stack		*root;
 	int			max;
@@ -66,20 +66,20 @@ int	is_max(t_stack **stack_a)
 	return (max);
 }
 // not tested
-t_stack	*get_next_min(t_stack **stack)
+t_stack	*get_next_min(t_stack *stack)
 {
 	t_stack		*root;
 	t_stack		*min;
 	bool		has_min;
 
-	root = *stack;
+	root = stack;
 	min = NULL;
 	has_min = false;
 	if (root)
 	{
 		while (root)
 		{
-			if ((root->index = -1) && (!has_min) || root->content < min->content)
+			if ((root->index == -1) && ((!has_min) || (root->content < min->content)))
 			{
 				min = root;
 				has_min = true;

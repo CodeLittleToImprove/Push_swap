@@ -48,7 +48,7 @@ void	sort3(t_stack **stack_a, int stack_len)
 
 	if (stack_len != 3)
 		return;
-	max = is_max(&*stack_a);
+	max = get_max_num(&*stack_a);
 	if (max == (*stack_a)->content )
 	{
 //		printf("run ra \n");
@@ -74,15 +74,15 @@ void sort_check(t_stack **stack_a, t_stack **stack_b)
 	stack_len = lst_len(stack_a);
 	if (stack_len == 2)
 	{
-		printf("sort2 start\n");
+//		printf("sort2 start\n");
 		sort2(stack_a, stack_len);
-		printf("sort2 successful\n");
+//		printf("sort2 successful\n");
 	}
 	else if (stack_len == 3)
 	{
-		printf("sort3 start\n");
+//		printf("sort3 start\n");
 		sort3(stack_a, stack_len);
-		printf("sort3 successful\n");
+//		printf("sort3 successful\n");
 	}
 
 	else
