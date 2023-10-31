@@ -65,18 +65,20 @@ void				print_index(t_stack *stack);
 void				stack_node_delete(t_stack **lst);
 void				stack_clear(t_stack **stack);
 int					lst_len(t_stack **lst);
-int					get_max_num(t_stack **stack_a);
-t_stack				*get_next_min(t_stack *root);
-int					get_distance()
+int					get_max_num(t_stack *stack_a);
+int					find_minimum_index(t_stack *stack_a);
+t_stack				*get_next_min_node(t_stack *stack);
+int					get_distance(t_stack *stack, int index);
 
 
 //sort_utils
 bool				is_sorted(t_stack **lst);
 void				sort_check(t_stack **stack_a, t_stack **stack_b);
-void				sort2(t_stack **stack_a, int stack_len);
-void				sort3(t_stack **stack_a, int stack_len);
-void				sort4(t_stack **stack_a, t_stack **stack_b, int stack_len);
-void				sort5(t_stack **stack_a, t_stack **stack_b, int stack_len);
+void				sort2(t_stack **stack_a);
+void				sort3(t_stack **stack_a);
+//void				sort4(t_stack **stack_a, t_stack **stack_b);
+void				sort4(t_stack **stack_a, t_stack **stack_b);
+void				sort5(t_stack **stack_a, t_stack **stack_b);
 void				radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 //push_command

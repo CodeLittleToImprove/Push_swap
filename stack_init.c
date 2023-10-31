@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// maybe don't malloc content change to be a normal int
 // this has 2 step in one malloc and inserting a value , it would be cleaner if I do one in each  functionstep
 
 t_stack_data_set	*init_stacks_struct(void)
@@ -72,11 +71,11 @@ void	index_stack(t_stack **stack)
 	t_stack		*root;
 
 	index = 0;
-	root = get_next_min(*stack);
+	root = get_next_min_node(*stack);
 	while (root)
 	{
 		root->index = ++index;
-		root = get_next_min(*stack);
+		root = get_next_min_node(*stack);
 	}
 }
 

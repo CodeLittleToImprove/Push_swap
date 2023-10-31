@@ -49,24 +49,40 @@ int	lst_len(t_stack **lst)
 	return (lst_len);
 }
 
-int	get_max_num(t_stack **stack_a)
+int	get_max_num(t_stack *stack_a)
 {
-	t_stack		*root;
+	t_stack		*current;
 	int			max;
 
-	root = *stack_a;
-	max = root->content;
-	while (root->next)
+	current = stack_a;
+	max = current->content;
+	while (current->next)
 	{
-		root = root->next;
-		if (root->content > max)
-			max = root->content;
+		current = current->next;
+		if (current->content > max)
+			max = current->content;
 	}
 //	printf("max = %d\n", max);
 	return (max);
 }
-// not tested
-t_stack	*get_next_min(t_stack *stack)
+// does this always return 1?
+int	find_minimum_index(t_stack *stack_a)
+{
+	t_stack		*current;
+	t_stack		*min;
+
+	current = stack_a;
+	min = current;
+	while (current->next)
+	{
+		current = current->next;
+		if (current->content < min->content)
+			min = current;
+	}
+//	printf("min = %d\n", min->index);
+	return (min->index);
+}
+t_stack	*get_next_min_node(t_stack *stack)
 {
 	t_stack		*root;
 	t_stack		*min;
@@ -91,6 +107,21 @@ t_stack	*get_next_min(t_stack *stack)
 	return (min);
 }
 
+int	get_distance(t_stack *stack, int index)
+{
+	t_stack	*current;
+	int		distance;
 
+	current = stack;
+	distance = 0;
+	while (current)
+	{
+		if (current->index == index)
+			break;
+		distance++;
+		current = current->next;
+	}
+	return (distance);
+}
 
 
