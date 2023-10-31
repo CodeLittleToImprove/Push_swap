@@ -66,6 +66,20 @@ void	insert_stack(t_stack **root, int value)
 	}
 }
 
+void	index_stack(t_stack **stack)
+{
+	int			index;
+	t_stack		*root;
+
+	index = 0;
+	root = get_next_min(*stack);
+	while (root)
+	{
+		root->index = ++index;
+		root = get_next_min(*stack);
+	}
+}
+
 t_stack	*create_list(char **input_array)
 {
 	size_t			index;
@@ -91,6 +105,7 @@ t_stack	*create_list(char **input_array)
 	index_stack(&stack_a);
 	return (stack_a);
 }
+
 //int	old main(void)
 //{
 //	t_stack	*root;

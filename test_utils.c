@@ -44,7 +44,7 @@ void	print_index(t_stack *stack)
 
 	while (current != NULL)
 	{
-		printf("Element[%zu] is %d\n", index, current->index);
+		printf("Element[%zu] has index %d\n", index, current->index);
 		current = current->next;
 		index++;
 	}

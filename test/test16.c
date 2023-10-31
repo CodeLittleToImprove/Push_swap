@@ -102,13 +102,13 @@ static t_stack	*get_next_min(t_stack *stack)
 	return (min);
 }
 
-// this kinda works but I don't understand why
 void index_stack(t_stack **stack) {
 	int index = 0;
 	t_stack *root = *stack;
 	t_stack *min;
 
-	while ((min = get_next_min(root)) != NULL) {
+	while ((min = get_next_min(root)) != NULL)
+	{
 		min->index = ++index;
 		root = min->next;
 	}

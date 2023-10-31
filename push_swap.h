@@ -51,6 +51,7 @@ void				ft_free_array(char *array[]);
 t_stack_data_set		*init_stacks_struct(void);
 t_stack				*init_stack_a(char *argv[]);
 t_stack				*create_list(char **input_array);
+void				index_stack(t_stack **stack);
 void				insert_stack(t_stack **root, int value);
 
 //utils
@@ -65,8 +66,9 @@ void				stack_node_delete(t_stack **lst);
 void				stack_clear(t_stack **stack);
 int					lst_len(t_stack **lst);
 int					get_max_num(t_stack **stack_a);
-t_stack				*get_next_min(t_stack *root); // not sure about this
-void				index_stack(t_stack **stack);
+t_stack				*get_next_min(t_stack *root);
+int					get_distance()
+
 
 //sort_utils
 bool				is_sorted(t_stack **lst);
@@ -76,6 +78,7 @@ void				sort3(t_stack **stack_a, int stack_len);
 void				sort4(t_stack **stack_a, t_stack **stack_b, int stack_len);
 void				sort5(t_stack **stack_a, t_stack **stack_b, int stack_len);
 void				radix_sort(t_stack **stack_a, t_stack **stack_b);
+
 //push_command
 void				push(t_stack **dest, t_stack **src);
 void				pa(t_stack **a, t_stack **b);

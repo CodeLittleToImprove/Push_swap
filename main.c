@@ -58,10 +58,12 @@ int	main(int argc, char *argv[])
 
 //		print_stack(set->stack_a);
 //		printf("finished print stack_a\n");
-//		sort_check(&set->stack_a, &set->stack_b);
+//		print_index(set->stack_a);
+//		printf("before_sort_check\n");
+		sort_check(&set->stack_a, &set->stack_b);
 //		printf("after_sort3\n");
 //		print_stack(set->stack_a);
-//		print_index(set->stack_a);
+		print_index(set->stack_a);
 		stack_clear(&set->stack_a);
 
 

@@ -56,13 +56,13 @@ int	get_max_num(t_stack **stack_a)
 
 	root = *stack_a;
 	max = root->content;
-	printf("max = %d\n", max);
 	while (root->next)
 	{
 		root = root->next;
 		if (root->content > max)
 			max = root->content;
 	}
+//	printf("max = %d\n", max);
 	return (max);
 }
 // not tested
@@ -79,7 +79,8 @@ t_stack	*get_next_min(t_stack *stack)
 	{
 		while (root)
 		{
-			if ((root->index == -1) && ((!has_min) || (root->content < min->content)))
+			if ((root->index == -1) && ((!has_min)
+					|| (root->content < min->content)))
 			{
 				min = root;
 				has_min = true;
@@ -90,18 +91,6 @@ t_stack	*get_next_min(t_stack *stack)
 	return (min);
 }
 
-//not tested
-void	index_stack(t_stack **stack)
-{
-	int			index;
-	t_stack		*root;
 
-	index = 0;
-	root = get_next_min(*stack);
-	while (root)
-	{
-		root->index = ++index;
-		root = get_next_min(*stack);
-	}
-}
+
 
