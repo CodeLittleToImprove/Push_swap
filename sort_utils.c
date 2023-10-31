@@ -81,10 +81,35 @@ void	sort4(t_stack **stack_a, t_stack **stack_b)
 	if (is_sorted(&*stack_a))
 		return;
 	pb(&*stack_b, &*stack_a);
-	sort3(stack_a);
+	sort3(stack_a); // why does this work
 	pa(&*stack_a, &*stack_b);
 //	printf("distance_to_lowest_index = %d\n", distance_to_lowest_index);
+}
 
+void	sort5(t_stack **stack_a, t_stack **stack_b)
+{
+	int distance_to_lowest_index;
+
+	distance_to_lowest_index = get_distance(*stack_a, find_minimum_index(*stack_a));
+	if (distance_to_lowest_index == 1)
+		ra(&*stack_a);
+	else if (distance_to_lowest_index == 2)
+	{
+		ra(&*stack_a);
+		ra(&*stack_a);
+	}
+	else if(distance_to_lowest_index ==3)
+	{
+		rra(&*stack_a);
+		rra(&*stack_a);
+	}
+
+	if (is_sorted(&*stack_a))
+		return;
+	pb(&*stack_b, &*stack_a);
+	sort4(stack_a,stack_b);
+	pa(&*stack_a, &*stack_b);
+//	printf("distance_to_lowest_index = %d\n", distance_to_lowest_index);
 }
 // implement sort stuff
 void sort_check(t_stack **stack_a, t_stack **stack_b)
@@ -106,6 +131,10 @@ void sort_check(t_stack **stack_a, t_stack **stack_b)
 	else if (stack_len == 4)
 	{
 		sort4(stack_a, stack_b);
+	}
+	else if (stack_len == 5)
+	{
+		sort5(stack_a, stack_b);
 	}
 	else
 	{

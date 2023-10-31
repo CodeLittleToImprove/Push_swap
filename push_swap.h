@@ -76,7 +76,6 @@ bool				is_sorted(t_stack **lst);
 void				sort_check(t_stack **stack_a, t_stack **stack_b);
 void				sort2(t_stack **stack_a);
 void				sort3(t_stack **stack_a);
-//void				sort4(t_stack **stack_a, t_stack **stack_b);
 void				sort4(t_stack **stack_a, t_stack **stack_b);
 void				sort5(t_stack **stack_a, t_stack **stack_b);
 void				radix_sort(t_stack **stack_a, t_stack **stack_b);

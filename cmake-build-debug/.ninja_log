@@ -47,3 +47,16 @@
 87	117	1698782311384496793	push_swap	c36757937f545a57
 0	89	1698782509927353833	CMakeFiles/push_swap.dir/sort_utils.c.o	2730deb2ed90e06b
 90	120	1698782509955354235	push_swap	c36757937f545a57
+0	59	1698782845639947081	CMakeFiles/push_swap.dir/input_validation.c.o	64cd2118bab75d9b
+1	59	1698782845639947081	CMakeFiles/push_swap.dir/main.c.o	553846861fc72ae9
+1	59	1698782845639947081	CMakeFiles/push_swap.dir/error_handler.c.o	d7d0e4721764377a
+1	60	1698782845639947081	CMakeFiles/push_swap.dir/stack_init.c.o	422c6a56996a737a
+60	82	1698782845659947343	CMakeFiles/push_swap.dir/push_command.c.o	92c762751eb3c9a6
+59	82	1698782845659947343	CMakeFiles/push_swap.dir/utils.c.o	cd74978b29760ad5
+59	82	1698782845663947396	CMakeFiles/push_swap.dir/test_utils.c.o	5ef1d24170cf5d2b
+59	83	1698782845663947396	CMakeFiles/push_swap.dir/linked_list_utils.c.o	f6edaba7a567483c
+82	108	1698782845687947711	CMakeFiles/push_swap.dir/reverse_rotate_command.c.o	d939bea80f690afd
+82	108	1698782845687947711	CMakeFiles/push_swap.dir/swap_command.c.o	9dd8061d38203dab
+82	109	1698782845687947711	CMakeFiles/push_swap.dir/rotate_command.c.o	d29b22b8a53c90df
+83	109	1698782845687947711	CMakeFiles/push_swap.dir/sort_utils.c.o	2730deb2ed90e06b
+110	138	1698782845715948079	push_swap	c36757937f545a57
