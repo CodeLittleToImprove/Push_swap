@@ -54,6 +54,41 @@ void    insert_stack(t_stack **root, int value)
 	}
 }
 
+t_stack    *get_next_min_node(t_stack *stack)
+{
+	t_stack        *root;
+	t_stack        *min;
+	bool        has_min;
+	root = stack;
+	min = NULL;
+	has_min = false;
+	if (root)
+	{
+		while (root)
+		{
+			if ((root->index == -1) && ((!has_min)
+										|| (root->content < min->content)))
+			{
+				min = root;
+				has_min = true;
+			}
+			root = root->next;
+		}
+	}
+	return (min);
+}
+void    index_stack(t_stack **stack)
+{
+	int            index;
+	t_stack        *root;
+	index = 0;
+	root = get_next_min_node(*stack);
+	while (root)
+	{
+		root->index = ++index;
+		root = get_next_min_node(*stack);
+	}
+}
 t_stack    *create_list(char **input_array)
 {
 	size_t            index;
@@ -67,6 +102,7 @@ t_stack    *create_list(char **input_array)
 			return (NULL);
 		index++;
 	}
+	index_stack(&stack_a);
 	return (stack_a);
 }
 

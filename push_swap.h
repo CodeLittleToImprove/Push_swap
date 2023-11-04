@@ -70,7 +70,6 @@ int					find_minimum_index(t_stack *stack_a);
 t_stack				*get_next_min_node(t_stack *stack);
 int					get_distance(t_stack *stack, int index);
 
-
 //sort_utils
 bool				is_sorted(t_stack **lst);
 void				sort_check(t_stack **stack_a, t_stack **stack_b);
@@ -80,6 +79,9 @@ void				sort4(t_stack **stack_a, t_stack **stack_b);
 void				sort5(t_stack **stack_a, t_stack **stack_b);
 void				radix_sort(t_stack **stack_a, t_stack **stack_b);
 
+//radix_sort
+int					get_max_bits(t_stack **stack);
+void				radix_sort(t_stack **stack_a, t_stack **stack_b);
 //push_command
 void				push(t_stack **dest, t_stack **src);
 void				pa(t_stack **a, t_stack **b);
