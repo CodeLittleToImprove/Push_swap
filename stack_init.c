@@ -31,7 +31,6 @@ t_stack	*init_stack_a(char *argv[])
 	t_stack		*stack_a;
 	char		**input_array;
 
-
 	input_array = argv;
 
 	stack_a = create_list(input_array);

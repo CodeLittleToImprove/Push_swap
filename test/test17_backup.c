@@ -108,8 +108,8 @@ t_stack    *create_list(char **input_array)
 
 t_stack    *init_stack_a(char *argv[])
 {
-	t_stack        *stack_a;
-	char        **input_array;
+	t_stack		*stack_a;
+	char		**input_array;
 
 	input_array = argv;
 	stack_a = create_list(input_array);
@@ -117,32 +117,13 @@ t_stack    *init_stack_a(char *argv[])
 	return (stack_a);
 }
 
-int                    get_max_bits(t_stack **stack)
-{
-	t_stack    *current;
-	int        max;
-	int        max_bits;
-	current = *stack;
-	max = current->index;
-	max_bits = 0;
-	while(current)
-	{
-		if (current->index > max)
-			max = current->index;
-		current = current->next;
-	}
-	while ((max >> max_bits) != 0)
-		++max_bits;
-	return (max_bits);
-}
 int    main(void)
 {
 	t_stack_data_set    *set;
-	char *argv[] = {"5", "2", "3", '\0'};
-	set = init_stacks_struct();
-	if (!set)
-		return (1);
-	set->stack_a = init_stack_a(argv);
-	int test = get_max_bits(&set->stack_a);
+	char *argv[] = {"5", "4", "1", "3", "2" ,"9",'\0'};
+	set->stack_a = init_stack_a(argv); // this leads to an error in pythontutor
+	set->stack_a = NULL;
+//	radix_sort(&set->stack_a, &set->stack_b);
 	return (0);
 }
+

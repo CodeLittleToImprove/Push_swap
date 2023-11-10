@@ -61,8 +61,7 @@ int	main(int argc, char *argv[])
 		print_stack(set->stack_a);
 		printf("before_sort_check\n");
 		sort_check(&set->stack_a, &set->stack_b);
-//		printf("after_sort3\n");
-//		print_stack(set->stack_a);
+		printf("after_sorted\n");
 		print_stack(set->stack_a);
 		printf("finished print stack_a\n");
 		print_stack(set->stack_b);

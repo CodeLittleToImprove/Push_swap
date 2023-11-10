@@ -16,7 +16,7 @@ bool	is_sorted(t_stack **lst)
 {
 	t_stack	*current;
 	int	num1;
-	int num2;
+	int	num2;
 
 	current = *lst;
 	while (current->next)
