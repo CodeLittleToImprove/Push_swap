@@ -119,6 +119,8 @@ void	sort5(t_stack **stack_a, t_stack **stack_b)
 		rra(&*stack_a);
 		rra(&*stack_a);
 	}
+	else if (distance_to_lowest_index == 4)
+		rra(&*stack_a);
 	if (is_sorted(&*stack_a))
 		return;
 	pb(&*stack_b, &*stack_a);

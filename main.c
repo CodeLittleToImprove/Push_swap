@@ -11,14 +11,12 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// not working
+// check how many steps averages I need
 int	main(int argc, char *argv[])
 {
 	t_stack_data_set	*set;
-	size_t			size;
-//	char			**cleaned_input;
-
-	printf("argc = %d\n", argc);
+	size_t				size;
+//	printf("argc = %d\n", argc);
 	if (argc <= 1)
 		return (1);
 
@@ -31,7 +29,6 @@ int	main(int argc, char *argv[])
 
 	if (is_valid_input(argv, size) == true)
 	{
-
 		set = init_stacks_struct();
 		if (!set)
 			return (1);
@@ -66,13 +63,6 @@ int	main(int argc, char *argv[])
 		printf("finished print stack_a\n");
 		print_stack(set->stack_b);
 		stack_clear(&set->stack_a);
-
-
-//		if (set->stack_a == NULL)
-//			printf("The linked list has been cleared and is now empty.\n");
-//		else
-//			printf("The linked list still contains elements.\n");
-//		print_stack(set->stack_a);
 	}
 	else
 	{

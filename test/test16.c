@@ -56,29 +56,7 @@ void	insert_stack(t_stack **root, int value)
 	}
 }
 
-//static t_stack	*get_next_min(t_stack *stack)
-//{
-//	t_stack		*min;
-//	bool		has_min;
-//
-//	min = NULL;
-//	has_min = false;
-//	if (stack)
-//	{
-//		while (stack)
-//		{
-//
-//			if ((stack->index == -1) && ((!has_min) || (stack->content < min->content)))
-//			{
-//				min = stack;
-//				has_min = true;
-//			}
-//			stack = stack->next;
-//		}
-//	}
-//	return (min);
-//}
-static t_stack	*get_next_min(t_stack *stack)
+t_stack	*get_next_min_node(t_stack *stack)
 {
 	t_stack		*root;
 	t_stack		*min;
@@ -91,7 +69,8 @@ static t_stack	*get_next_min(t_stack *stack)
 	{
 		while (root)
 		{
-			if ((root->index == -1) && (!has_min) || root->content < min->content)
+			if ((root->index == -1) && ((!has_min)
+										|| (root->content < min->content)))
 			{
 				min = root;
 				has_min = true;
@@ -102,48 +81,36 @@ static t_stack	*get_next_min(t_stack *stack)
 	return (min);
 }
 
-void index_stack(t_stack **stack) {
-	int index = 0;
-	t_stack *root = *stack;
-	t_stack *min;
-
-	while ((min = get_next_min(root)) != NULL)
-	{
-		min->index = ++index;
-		root = min->next;
-	}
-}
-// would prefer this
-//void index_stack(t_stack **stack) {
-//	int index = 0;
-//	t_stack *root = *stack;
-//	t_stack *min;
+//void	index_stack(t_stack **stack)
+//{
+//	int			index;
+//	t_stack		*root;
 //
-//	while (root != NULL) {
+//	index = 0;
+//	root = get_next_min_node(*stack);
+//	while (root)
+//	{
 //		root->index = ++index;
-//		root = get_next_min(*stack);
+//		root = get_next_min_node(*stack);
 //	}
 //}
+
 t_stack    *create_list(char **input_array)
 {
 	size_t            index;
 	t_stack            *stack_a;
 
 	stack_a = NULL;
-
 	index = 0;
 
 	while (input_array[index])
 	{
-
 		insert_stack(&stack_a, atoi(input_array[index]));
 		if (!stack_a)
 			return (NULL);
-
 		index++;
-
 	}
-	index_stack(&stack_a);
+//	index_stack(&stack_a);
 	return (stack_a);
 }
 
@@ -160,35 +127,42 @@ t_stack    *init_stack_a(char *argv[])
 	return (stack_a);
 }
 
-void	print_index(t_stack *stack)
+void	push(t_stack **dest, t_stack **src)
 {
-	t_stack		*current;
-	size_t		index;
+	t_stack *node_to_push;
 
-	current = stack;
-	index = 0;
-
-	if (current == NULL)
-		printf("current is null\n");
-
-	while (current != NULL)
+	if (*src == NULL)
+		return;
+	node_to_push = *src;
+	*src = (*src)->next;
+	if (*dest == NULL) {
+		*dest = node_to_push;
+		node_to_push->next = NULL;
+	} else
 	{
-		printf("Element[%zu] is %d\n", index, current->index);
-		current = current->next;
-		index++;
+		node_to_push->next = *dest;
+		*dest = node_to_push;
 	}
 }
+void	pa(t_stack **a, t_stack **b)
+{
+	push(a, b);
+}
+
+void	pb(t_stack **b, t_stack **a)
+{
+	push(b, a);
+}
+
 int    main(void)
 {
 	t_stack_data_set    *set;
 	bool				sorted;
-	char *argv[] = {"5", "2", "3", '\0'};
+	char *argv[] = {"0", "1", "2", "-5", "-3", '\0'};
 
 	set = init_stacks_struct();
-	if (!set)
-		return (1);
 	set->stack_a = init_stack_a(argv);
-	print_index(set->stack_a);
+
 	return (0);
 }
 

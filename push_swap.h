@@ -48,7 +48,7 @@ bool				is_array_not_a_duplicate(char *argv[], size_t size);
 void				ft_free_array(char *array[]);
 
 //stack_initialization
-t_stack_data_set		*init_stacks_struct(void);
+t_stack_data_set	*init_stacks_struct(void);
 t_stack				*init_stack_a(char *argv[]);
 t_stack				*create_list(char **input_array);
 void				index_stack(t_stack **stack);
@@ -80,7 +80,7 @@ void				sort5(t_stack **stack_a, t_stack **stack_b);
 void				radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 //radix_sort
-int					get_max_bits(t_stack **stack);
+//int					get_max_bits(t_stack **stack);
 void				radix_sort(t_stack **stack_a, t_stack **stack_b);
 //push_command
 void				push(t_stack **dest, t_stack **src);

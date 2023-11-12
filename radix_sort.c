@@ -12,26 +12,26 @@
 
 #include "push_swap.h"
 
-int					get_max_bits(t_stack **stack)
-{
-	t_stack	*current;
-	int		max;
-	int		max_bits;
-
-	current = *stack;
-	max = current->index;
-	max_bits = 0;
-
-	while(current)
-	{
-		if (current->index > max)
-			max = current->index;
-		current = current->next;
-	}
-	while ((max >> max_bits) != 0)
-		++max_bits;
-	return (max_bits);
-}
+//int					get_max_bits(t_stack **stack)
+//{
+//	t_stack	*current;
+//	int		max;
+//	int		max_bits;
+//
+//	current = *stack;
+//	max = current->index;
+//	max_bits = 0;
+//
+//	while(current)
+//	{
+//		if (current->index > max)
+//			max = current->index;
+//		current = current->next;
+//	}
+//	while ((max >> max_bits) != 0)
+//		++max_bits;
+//	return (max_bits);
+//}
 // some error here
 //void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 //{
@@ -80,28 +80,31 @@ int					get_max_bits(t_stack **stack)
 void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int	stack_len;
-	int	number;
 	int	bit_number;
-	int	counter;
+	int	index;
+	int	nbr;
 
 	stack_len = lst_len(stack_a);
 	bit_number = 0;
-	counter = 0;
+	index = 0;
 	while (is_sorted(&*stack_a) != true)
 	{
-		while (counter < stack_len)
+		while (index < stack_len)
 		{
-			number = (*stack_a)->content;
-			if (((number >> bit_number) & 1) == 1)
+			nbr = (*stack_a)->content;
+			if (((nbr >> bit_number) & 1) == 1)
 				ra(&*stack_a);
 			else
+			{
 				pb(&*stack_b, &*stack_a);
-			counter++;
+				print_stack(&stack_b);
+			}
+			index++;
 		}
+		// breaks here for negative numbers
 		while (*stack_b)
 			pa(&*stack_a, &*stack_b);
 		bit_number++;
-		counter = 0;
+		index = 0;
 	}
-//	printf("done with radix sort \n");
 }
