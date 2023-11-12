@@ -97,9 +97,16 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 			else
 			{
 				pb(&*stack_b, &*stack_a);
-				print_stack(&stack_b);
+				print_stack(&*stack_b);
 			}
 			index++;
+//			if(index == stack_len)
+//			{
+//				printf("%d\n", index);
+//				return ;
+//			}
+		// here it breaks i think
+
 		}
 		// breaks here for negative numbers
 		while (*stack_b)
