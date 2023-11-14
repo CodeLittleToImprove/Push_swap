@@ -15,8 +15,8 @@
 bool	is_sorted(t_stack **lst)
 {
 	t_stack	*current;
-	int	num1;
-	int	num2;
+	int		num1;
+	int		num2;
 
 	current = *lst;
 	while (current->next)
@@ -29,6 +29,7 @@ bool	is_sorted(t_stack **lst)
 	}
 	return (true);
 }
+
 void	sort2(t_stack **stack_a)
 {
 	t_stack	*first_element;
@@ -47,64 +48,44 @@ void	sort3(t_stack **stack_a)
 	max = get_max_num(*stack_a);
 	if (max == (*stack_a)->content)
 	{
-//		printf("run ra \n");
 		ra(&*stack_a);
-//		print_stack(*stack_a);
 	}
-
 	if (max == (*stack_a)->next->content)
 	{
-//		printf("run rra \n");
 		rra(&*stack_a);
 	}
 	if ((*stack_a)->content > (*stack_a)->next->content)
 	{
-//		printf("run sa \n");
 		sa(&*stack_a);
 	}
-
 }
 
 void	sort4(t_stack **stack_a, t_stack **stack_b)
 {
-	int distance_to_lowest_index;
+	int	distance_to_lowest_index;
 
 	distance_to_lowest_index = get_distance(*stack_a, find_minimum_index(*stack_a));
 	if (distance_to_lowest_index == 1)
-	{
 		ra(&*stack_a);
-//		printf("distance = 1 \n");
-//		printf("run ra \n");
-	}
 
 	else if (distance_to_lowest_index == 2)
 	{
-//		printf("distance = 2 \n");
-//		print_stack(*stack_a);
 		ra(&*stack_a);
-//		printf("run ra \n");
-//		print_stack(*stack_a);
 		ra(&*stack_a);
-//		printf("run ra \n");
-//		print_stack(*stack_a);
 	}
-	else if(distance_to_lowest_index ==3)
-	{
+	else if (distance_to_lowest_index == 3)
 		rra(&*stack_a);
-//		printf("distance = 3 \n");
-//		printf("run rra \n");
-	}
+
 	if (is_sorted(&*stack_a))
-		return;
+		return ;
 	pb(&*stack_b, &*stack_a);
 	sort3(stack_a);
 	pa(&*stack_a, &*stack_b);
-//	printf("distance_to_lowest_index = %d\n", distance_to_lowest_index);
 }
 
 void	sort5(t_stack **stack_a, t_stack **stack_b)
 {
-	int distance_to_lowest_index;
+	int	distance_to_lowest_index;
 
 	distance_to_lowest_index = get_distance(*stack_a, find_minimum_index(*stack_a));
 	if (distance_to_lowest_index == 1)
@@ -114,7 +95,7 @@ void	sort5(t_stack **stack_a, t_stack **stack_b)
 		ra(&*stack_a);
 		ra(&*stack_a);
 	}
-	else if(distance_to_lowest_index ==3)
+	else if (distance_to_lowest_index == 3)
 	{
 		rra(&*stack_a);
 		rra(&*stack_a);
@@ -122,41 +103,25 @@ void	sort5(t_stack **stack_a, t_stack **stack_b)
 	else if (distance_to_lowest_index == 4)
 		rra(&*stack_a);
 	if (is_sorted(&*stack_a))
-		return;
+		return ;
 	pb(&*stack_b, &*stack_a);
-	sort4(stack_a,stack_b);
+	sort4(stack_a, stack_b);
 	pa(&*stack_a, &*stack_b);
 }
-// implement sort stuff
+
 void sort_check(t_stack **stack_a, t_stack **stack_b)
 {
-	int stack_len;
+	int	stack_len;
+
 	stack_len = lst_len(stack_a);
 	if (stack_len == 2)
-	{
-//		printf("sort2 start\n");
 		sort2(stack_a);
-//		printf("sort2 successful\n");
-	}
 	else if (stack_len == 3)
-	{
-//		printf("sort3 start\n");
 		sort3(stack_a);
-//		printf("sort3 successful\n");
-	}
 	else if (stack_len == 4)
-	{
 		sort4(stack_a, stack_b);
-	}
 	else if (stack_len == 5)
-	{
 		sort5(stack_a, stack_b);
-	}
 	else
-	{
-		printf("should use radix\n");
-//int test = get_max_bits(stack_a);
-//printf("test = %d\n",test);
-		radix_sort(stack_a,stack_b);
-	}
+		radix_sort(stack_a, stack_b);
 }
