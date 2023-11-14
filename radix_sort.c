@@ -77,35 +77,28 @@
 //		}
 //	}
 //}
-// need to rewrite this that it does not use it's real number to sort instead use there index values;
+
 void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int	stack_len;
 	int	bit_number;
 	int	index;
-	int	nbr;
+	int	current_index;
 
 	stack_len = lst_len(stack_a);
 	bit_number = 0;
 	index = 0;
-//	print_stack(*stack_a);
-//	print_index(*stack_a);
 	while (is_sorted(&*stack_a) != true)
 	{
 		while (index < stack_len)
 		{
-			nbr = (*stack_a)->content;
-			if (((nbr >> bit_number) & 1) == 1)
+			current_index = (*stack_a)->index;
+			if (((current_index >> bit_number) & 1) == 1)
 				ra(&*stack_a);
 			else
-			{
 				pb(&*stack_b, &*stack_a);
-////				print_stack(*stack_b);
-			}
 			index++;
 		}
-		// breaks here for negative numbers
-//		printf("rip here\n");
 		while (*stack_b)
 			pa(&*stack_a, &*stack_b);
 		bit_number++;

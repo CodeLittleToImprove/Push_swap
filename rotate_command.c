@@ -16,10 +16,10 @@ void	rotate(t_stack **stack_x)
 {
 	t_stack	*first_element;
 	t_stack	*second_element;
-	t_stack *new_first_element;
+	t_stack	*new_first_element;
 
 	if (*stack_x == NULL || (*stack_x)->next == NULL)
-		return;
+		return ;
 	first_element = *stack_x;
 	second_element = first_element->next;
 	new_first_element = second_element;
