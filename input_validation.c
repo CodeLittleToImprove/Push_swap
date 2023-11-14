@@ -25,7 +25,6 @@ bool	is_valid_input(char *argv[], size_t size)
 //			printf("entry checked %s\n", argv[index]);
 			if (!is_valid_number(argv[index]) ||!is_valid_int_string(argv[index]))
 			{
-//				printf("hier wird verkackt %s\n", argv[index]);
 				return (false);
 			}
 

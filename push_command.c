@@ -14,26 +14,29 @@
 
 void	push(t_stack **dest, t_stack **src)
 {
-	t_stack *node_to_push;
+	t_stack	*node_to_push;
 
 	if (*src == NULL)
-		return;
+		return ;
 	node_to_push = *src;
 	*src = (*src)->next;
-	if (*dest == NULL) {
+	if (*dest == NULL)
+	{
 		*dest = node_to_push;
 		node_to_push->next = NULL;
-	} else
+	}
+	else
 	{
 		node_to_push->next = *dest;
 		*dest = node_to_push;
 	}
 }
-	void	pa(t_stack **a, t_stack **b)
-	{
+
+void	pa(t_stack **a, t_stack **b)
+{
 		push(a, b);
 		printf("pa\n");
-	}
+}
 
 	void	pb(t_stack **b, t_stack **a)
 	{
