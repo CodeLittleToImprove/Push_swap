@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 // check how many steps averages I need
+// problem if input is like this push_swap 2 is equal to  push_swap "2 1" argc is in both cases 2
 int	main(int argc, char *argv[])
 {
 	t_stack_data_set	*set;
@@ -25,8 +26,7 @@ int	main(int argc, char *argv[])
 	else
 		argv = argv + 1;
 	size = argc - 1;
-
-
+//	printf("size = %ld\n", size);
 	if (is_valid_input(argv, size) == true)
 	{
 		set = init_stacks_struct();
@@ -38,6 +38,8 @@ int	main(int argc, char *argv[])
 		if (is_sorted(&set->stack_a) == true)
 		{
 			printf("all numbers are already sorted\n");
+			stack_clear(&set->stack_a);
+			free(set);
 			return (0);
 		}
 		printf("Nodes successful written\n");
