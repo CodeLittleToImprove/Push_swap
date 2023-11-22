@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// need to handle argc somewhere different
+
 int	main(int argc, char *argv[])
 {
 	t_stack_data_set	*set;
@@ -35,10 +35,16 @@ int	main(int argc, char *argv[])
 		if (argc == 2)
 			ft_free_array(argv);
 		if (is_sorted(&set->stack_a) == true)
-			return (stack_clear(&set->stack_a), free(set), 0);
-		return (sort_check(&set->stack_a, &set->stack_b),
-			stack_clear(&set->stack_a), free(set), 0);
+		{
+			stack_clear(&set->stack_a);
+			free(set);
+			return (0);
+		}
+		sort_check(&set->stack_a, &set->stack_b);
+		stack_clear(&set->stack_a);
 	}
 	else
 		return (write(STDERR_FILENO, "Error\n", 6));
+	free(set);
+	return (0);
 }

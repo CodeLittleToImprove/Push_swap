@@ -117,7 +117,7 @@ int	get_distance(t_stack *stack, int index)
 	while (current)
 	{
 		if (current->index == index)
-			break;
+			break ;
 		distance++;
 		current = current->next;
 	}

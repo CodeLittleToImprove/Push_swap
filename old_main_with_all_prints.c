@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// need to handle argc somewhere different
+// check how many steps averages I need
 int	main(int argc, char *argv[])
 {
 	t_stack_data_set	*set;
@@ -19,6 +19,7 @@ int	main(int argc, char *argv[])
 
 	if (argc <= 1)
 		return (1);
+
 	if (argc == 2)
 		argv = ft_split(argv[1], ' ');
 	else
@@ -30,15 +31,31 @@ int	main(int argc, char *argv[])
 		if (!set)
 			return (1);
 		set->stack_a = create_stack_a(argv);
-		if (!set->stack_a)
-			return (1);
 		if (argc == 2)
 			ft_free_array(argv);
 		if (is_sorted(&set->stack_a) == true)
-			return (stack_clear(&set->stack_a), free(set), 0);
-		return (sort_check(&set->stack_a, &set->stack_b),
-			stack_clear(&set->stack_a), free(set), 0);
+		{
+			printf("all numbers are already sorted\n");
+			stack_clear(&set->stack_a);
+			free(set);
+			return (0);
+		}
+		printf("Nodes successful written\n");
+		print_stack(set->stack_a);
+		printf("before_sort_check\n");
+		sort_check(&set->stack_a, &set->stack_b);
+		printf("after_sorted\n");
+		print_stack(set->stack_a);
+		printf("finished print stack_a\n");
+		print_stack(set->stack_b);
+		stack_clear(&set->stack_a);
 	}
 	else
+	{
+		printf("else case in main \n");
+//		ft_free_array(argv);
 		return (write(STDERR_FILENO, "Error\n", 6));
+	}
+	free(set);
+	return (0);
 }

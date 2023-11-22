@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// this has 2 step in one malloc and inserting a value , it would be cleaner if I do one in each  functionstep
 
 t_stack_data_set	*init_stacks_struct(void)
 {
@@ -25,21 +24,30 @@ t_stack_data_set	*init_stacks_struct(void)
 	return (set);
 }
 
-
-t_stack	*init_stack_a(char *argv[])
+t_stack	*create_stack_a(char *argv[])
 {
 	t_stack		*stack_a;
 	char		**input_array;
+	size_t		index;
 
+	stack_a = NULL;
 	input_array = argv;
-
-	stack_a = create_list(input_array);
-//	ft_free_array(input_array);
-
+	index = 0;
+	while (input_array[index])
+	{
+		printf("Inserting element %d\n", ft_atoi(input_array[index]));
+		if (insert_stack(&stack_a, ft_atoi(input_array[index])) == false)
+		{
+			stack_clear(&stack_a);
+			return (NULL);
+		}
+		index++;
+	}
+	index_stack(&stack_a);
 	return (stack_a);
 }
 
-void	insert_stack(t_stack **root, int value)
+bool	insert_stack(t_stack **root, int value)
 {
 	t_stack	*current;
 	t_stack	*new_node;
@@ -48,7 +56,7 @@ void	insert_stack(t_stack **root, int value)
 	new_node = malloc(sizeof(t_stack));
 	if (new_node == NULL)
 	{
-		exit(1);
+		return (false);
 	}
 	new_node->content = value;
 	new_node->index = -1;
@@ -62,6 +70,7 @@ void	insert_stack(t_stack **root, int value)
 			current = current->next;
 		current->next = new_node;
 	}
+	return (true);
 }
 
 void	index_stack(t_stack **stack)
@@ -76,32 +85,6 @@ void	index_stack(t_stack **stack)
 		root->index = ++index;
 		root = get_next_min_node(*stack);
 	}
-}
-
-t_stack	*create_list(char **input_array)
-{
-	size_t			index;
-	t_stack			*stack_a;
-
-	stack_a = NULL;
-
-	index = 0;
-//	printf("currently insert value %s\n", input_array[0]);
-//	printf("currently insert value %s\n", input_array[1]);
-//	printf("currently insert value %s\n", input_array[2]);
-//	printf("argc %d\n", argc);
-	while (input_array[index])
-	{
-		printf("Inserting element %d\n", ft_atoi(input_array[index]));
-		insert_stack(&stack_a, ft_atoi(input_array[index]));
-		if (!stack_a)
-			return (NULL);
-//		printf("index pre incrementation %zu\n", index);
-		index++;
-//		printf("index after incrementation %zu\n", index);
-	}
-	index_stack(&stack_a);
-	return (stack_a);
 }
 
 //int	old main(void)

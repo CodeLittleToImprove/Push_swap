@@ -49,10 +49,10 @@ void				ft_free_array(char *array[]);
 
 //stack_initialization
 t_stack_data_set	*init_stacks_struct(void);
-t_stack				*init_stack_a(char *argv[]);
-t_stack				*create_list(char **input_array);
+t_stack				*create_stack_a(char *argv[]);
+//t_stack				*create_list(char **input_array);
 void				index_stack(t_stack **stack);
-void				insert_stack(t_stack **root, int value);
+bool				insert_stack(t_stack **root, int value);
 
 //utils
 long long			ft_atoll(const char *nptr);

@@ -54,104 +54,78 @@ build CMakeFiles/push_swap.dir/input_validation.c.o: C_COMPILER__push_swap_unsca
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/main.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/main.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/main.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/error_handler.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/error_handler.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/error_handler.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/stack_init.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/stack_init.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/stack_init.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/test_utils.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/test_utils.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/test_utils.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/utils.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/utils.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/utils.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/linked_list_utils.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/linked_list_utils.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/linked_list_utils.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/push_command.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/push_command.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/push_command.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/swap_command.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/swap_command.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/swap_command.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/rotate_command.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/rotate_command.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/rotate_command.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/reverse_rotate_command.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/reverse_rotate_command.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/reverse_rotate_command.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/sort_utils.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/sort_utils.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/sort_utils.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 build CMakeFiles/push_swap.dir/radix_sort.c.o: C_COMPILER__push_swap_unscanned_Debug /home/kunel/CLionProjects/push_swap/radix_sort.c || cmake_object_order_depends_target_push_swap
   DEP_FILE = CMakeFiles/push_swap.dir/radix_sort.c.o.d
   FLAGS = -g -std=gnu99 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/push_swap.dir
   OBJECT_FILE_DIR = CMakeFiles/push_swap.dir
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
-  TARGET_PDB = push_swap.pdb
 
 
 # =============================================================================
@@ -167,9 +141,8 @@ build push_swap: C_EXECUTABLE_LINKER__push_swap_Debug CMakeFiles/push_swap.dir/i
   OBJECT_DIR = CMakeFiles/push_swap.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/push_swap.dir/
   TARGET_FILE = push_swap
-  TARGET_PDB = push_swap.pdb
+  TARGET_PDB = push_swap.dbg
 
 
 #############################################
@@ -214,14 +187,14 @@ build all: phony push_swap
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/kunel/CLionProjects/push_swap/CMakeLists.txt /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompiler.cmake.in /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCompilerIdDetection.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompileFeatures.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeFindBinUtils.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseImplicitLinkInfo.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseLibraryArchitecture.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystem.cmake.in /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCompilerCommon.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-FindBinUtils.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/TI-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/kunel/CLionProjects/push_swap/CMakeLists.txt /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/kunel/CLionProjects/push_swap/CMakeLists.txt /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompiler.cmake.in /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCompilerIdDetection.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompileFeatures.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeFindBinUtils.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseImplicitLinkInfo.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeParseLibraryArchitecture.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystem.cmake.in /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCompilerCommon.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-FindBinUtils.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/TI-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build /home/kunel/CLionProjects/push_swap/CMakeLists.txt /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux.cmake /opt/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################
