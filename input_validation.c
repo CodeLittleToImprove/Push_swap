@@ -11,19 +11,19 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-bool	is_valid_input(char *argv[], size_t size)
+// input check not working properly when input is like "2 2" instead of 2 2
+bool	is_valid_input(char **input, size_t size)
 {
 	size_t	index;
 
 	index = 0;
 
-	if (is_array_not_a_duplicate(argv, size))
+	if (is_array_not_a_duplicate(input, size))
 	{
-		while (argv[index] != NULL)
+		while (input[index] != NULL)
 		{
-//			printf("entry checked %s\n", argv[index]);
-			if (!is_valid_number(argv[index]) ||!is_valid_int_string(argv[index]))
+//			printf("entry checked %s\n", input[index]);
+			if (!is_valid_number(input[index]) || !is_valid_int_string(input[index]))
 			{
 				return (false);
 			}
@@ -72,7 +72,8 @@ bool	is_valid_int_string(char *str_nbr)
 
 	return(true);
 }
-bool	is_array_not_a_duplicate(char *argv[], size_t size)
+
+bool	is_array_not_a_duplicate(char **input, size_t size)
 {
 	size_t	outer_index;
 	size_t	inner_index;
@@ -85,13 +86,16 @@ bool	is_array_not_a_duplicate(char *argv[], size_t size)
 		inner_index = outer_index + 1;
 		while (inner_index < size)
 		{
-			if (ft_strncmp(argv[outer_index], argv[inner_index],
-					max_int_len) == 0)
+			if (ft_strncmp(input[outer_index], input[inner_index],
+						   max_int_len) == 0)
+			{
+				printf("is a duplicate\n");
 				return (false);
+			}
 			inner_index++;
 		}
 		outer_index++;
 	}
-//printf("is not a duplicate\n");
+printf("is not a duplicate\n");
 	return (true);
 }

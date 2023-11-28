@@ -33,6 +33,7 @@ int	main(int argc, char *argv[])
 	size_t				size;
 	char				**input;
 
+//	printf("%d\n", argc);
 	process_arguments(argc, argv, &size, &input);
 	if (is_valid_input(input, size) == true)
 	{
@@ -50,5 +51,9 @@ int	main(int argc, char *argv[])
 			stack_clear(&set->stack_a), free(set), 0);
 	}
 	else
-		return (write(STDERR_FILENO, "Error\n", 6));
+	{
+		printf("in else\n");
+		return (write(STDERR_FILENO, "Error\n", 6), -1);
+	}
+
 }
