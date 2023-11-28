@@ -34,12 +34,12 @@ void	push(t_stack **dest, t_stack **src)
 
 void	pa(t_stack **a, t_stack **b)
 {
-		push(a, b);
-		printf("pa\n");
+	push(a, b);
+	ft_putstr_fd("pa\n", STDOUT_FILENO);
 }
 
-	void	pb(t_stack **b, t_stack **a)
-	{
-		push(b, a);
-		printf("pb\n");
-	}
+void	pb(t_stack **b, t_stack **a)
+{
+	push(b, a);
+	ft_putstr_fd("pb\n", STDOUT_FILENO);
+}

@@ -24,17 +24,18 @@ t_stack_data_set	*init_stacks_struct(void)
 	return (set);
 }
 
-t_stack	*create_stack_a(char **input)
+t_stack	*create_stack_a(char *argv[])
 {
 	t_stack		*stack_a;
 	char		**input_array;
 	size_t		index;
 
 	stack_a = NULL;
-	input_array = input;
+	input_array = argv;
 	index = 0;
 	while (input_array[index])
 	{
+		printf("Inserting element %d\n", ft_atoi(input_array[index]));
 		if (insert_stack(&stack_a, ft_atoi(input_array[index])) == false)
 		{
 			stack_clear(&stack_a);
@@ -72,31 +73,6 @@ bool	insert_stack(t_stack **root, int value)
 	return (true);
 }
 
-t_stack	*get_next_min_node(t_stack *stack)
-{
-	t_stack		*root;
-	t_stack		*min;
-	bool		has_min;
-
-	root = stack;
-	min = NULL;
-	has_min = false;
-	if (root)
-	{
-		while (root)
-		{
-			if ((root->index == -1) && ((!has_min)
-					|| (root->content < min->content)))
-			{
-				min = root;
-				has_min = true;
-			}
-			root = root->next;
-		}
-	}
-	return (min);
-}
-
 void	index_stack(t_stack **stack)
 {
 	int			index;
@@ -110,3 +86,27 @@ void	index_stack(t_stack **stack)
 		root = get_next_min_node(*stack);
 	}
 }
+
+//int	old main(void)
+//{
+//	t_stack	*root;
+//	t_stack	*current;
+//
+//	root = NULL;
+//
+//	insert_stack(&root, 5);
+//	insert_stack(&root, -2);
+//	insert_stack(&root, 6);
+//
+//	current = root;
+//	while (current != NULL)
+//	{
+//		if (current->content != NULL)
+//			printf("%d\n", *(current->content));
+//		else
+//			printf("Content is NULL \n");
+//		current = current->next;
+//	}
+//
+//	return (0);
+//}

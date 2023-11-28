@@ -12,7 +12,7 @@ add_executable(push_swap
         push_swap.h
         input_validation.c
         main.c
-        error_handler.c
+        array_cleanup.c
         stack_init.c
         test_utils.c
         utils.c
@@ -22,7 +22,8 @@ add_executable(push_swap
         rotate_command.c
         reverse_rotate_command.c
         sort_utils.c
-        radix_sort.c)
+        radix_sort.c
+        sort_up_to_five.c)
 
 # Link the executable with the libft library
 target_link_libraries(push_swap libft)

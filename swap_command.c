@@ -20,30 +20,29 @@ void	swap(t_stack **stack_x)
 	first_element = NULL;
 	second_element = NULL;
 	if (*stack_x == NULL || (*stack_x)->next == NULL)
-		return;
+		return ;
 	first_element = (*stack_x);
-	second_element = (*stack_x) ->next;
+	second_element = (*stack_x)->next;
 	first_element->next = second_element ->next;
 	second_element->next = first_element;
 	*stack_x = second_element;
-
 }
 
 void	sa(t_stack **stack_a)
 {
 	swap(stack_a);
-	printf("sa\n");
+	ft_putstr_fd("sa\n", STDOUT_FILENO);
 }
 
 void	sb(t_stack **stack_b)
 {
 	swap(stack_b);
-	printf("sb\n");
+	ft_putstr_fd("sb\n", STDOUT_FILENO);
 }
 
 void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	printf("ss\n");
+	ft_putstr_fd("ss\n", STDOUT_FILENO);
 }

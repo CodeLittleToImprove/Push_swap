@@ -19,10 +19,8 @@ void	print_stack(t_stack *stack)
 
 	current = stack;
 	index = 0;
-
 	if (current == NULL)
-		printf("current is null\n");
-
+		ft_putstr_fd("current is null\n", STDOUT_FILENO);
 	while (current != NULL)
 	{
 		printf("Element[%zu] is %d\n", index, current->content);
@@ -38,10 +36,8 @@ void	print_index(t_stack *stack)
 
 	current = stack;
 	index = 0;
-
 	if (current == NULL)
-		printf("current is null\n");
-
+		ft_putstr_fd("current is null\n", STDOUT_FILENO);
 	while (current != NULL)
 	{
 		printf("Element[%zu] has index %d\n", index, current->index);

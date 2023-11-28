@@ -24,18 +24,3 @@ void	ft_free_array(char *array[])
 	}
 	free(array);
 }
-
-// maybe not needed
-void	ft_free_linked_list(t_stack *root)
-{
-	t_stack	*current;
-	t_stack	*temp;
-
-	current = root;
-	while (current != NULL)
-	{
-		temp = current;
-		current = current->next;
-		free(temp);
-	}
-}

@@ -11,29 +11,39 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// need to handle argc somewhere different
+
+void	process_arguments(int argc, char *argv[], size_t *size, char ***input)
+{
+	if (argc <= 1)
+	{
+		*size = 0;
+		*input = NULL;
+		exit(0);
+	}
+	if (argc == 2)
+		*input = ft_split(argv[1], ' ');
+	else
+		*input = argv + 1;
+	*size = argc - 1;
+}
+
 int	main(int argc, char *argv[])
 {
 	t_stack_data_set	*set;
 	size_t				size;
+	char				**input;
 
-	if (argc <= 1)
-		return (1);
-	if (argc == 2)
-		argv = ft_split(argv[1], ' ');
-	else
-		argv = argv + 1;
-	size = argc - 1;
-	if (is_valid_input(argv, size) == true)
+	process_arguments(argc, argv, &size, &input);
+	if (is_valid_input(input, size) == true)
 	{
 		set = init_stacks_struct();
 		if (!set)
 			return (1);
-		set->stack_a = create_stack_a(argv);
+		set->stack_a = create_stack_a(input);
 		if (!set->stack_a)
 			return (1);
 		if (argc == 2)
-			ft_free_array(argv);
+			ft_free_array(input);
 		if (is_sorted(&set->stack_a) == true)
 			return (stack_clear(&set->stack_a), free(set), 0);
 		return (sort_check(&set->stack_a, &set->stack_b),

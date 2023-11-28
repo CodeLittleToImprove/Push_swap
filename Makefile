@@ -21,7 +21,7 @@ LIBFT			= libft
 
 SRCDIR			= srcs
 
-SRCS			= main.c input_validation.c error_handler.c stack_init.c test_utils.c utils.c linked_list_utils.c push_command.c swap_command.c rotate_command.c reverse_rotate_command.c sort_utils.c radix_sort.c
+SRCS			= main.c input_validation.c array_cleanup.c stack_init.c test_utils.c utils.c linked_list_utils.c push_command.c swap_command.c rotate_command.c reverse_rotate_command.c sort_utils.c sort_up_to_five.c radix_sort.c
 
 OBJS			= ${SRCS:.c=.o}
 

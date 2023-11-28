@@ -27,7 +27,6 @@ typedef struct s_stack
 	int							content;
 	struct s_stack				*next;
 	int							index;
-//	struct s_stack			*prev;
 }	t_stack;
 
 typedef struct s_stack_data_set
@@ -44,18 +43,18 @@ bool				is_valid_number(char *str_nbr);
 bool				is_valid_int_string(char *str_nbr);
 bool				is_array_not_a_duplicate(char *argv[], size_t size);
 
-//error handling
+//array_cleanup
 void				ft_free_array(char *array[]);
 
-//stack_initialization
+//stack_init
 t_stack_data_set	*init_stacks_struct(void);
-t_stack				*create_stack_a(char *argv[]);
-//t_stack				*create_list(char **input_array);
-void				index_stack(t_stack **stack);
+t_stack				*create_stack_a(char **input);
 bool				insert_stack(t_stack **root, int value);
+t_stack				*get_next_min_node(t_stack *stack);
+void				index_stack(t_stack **stack);
 
 //utils
-long long			ft_atoll(const char *nptr);
+long long			ft_atoll(const char *nbr_str);
 
 //test utils
 void				print_stack(t_stack *stack);
@@ -65,14 +64,15 @@ void				print_index(t_stack *stack);
 void				stack_node_delete(t_stack **lst);
 void				stack_clear(t_stack **stack);
 int					lst_len(t_stack **lst);
-int					get_max_num(t_stack *stack_a);
-int					find_minimum_index(t_stack *stack_a);
-t_stack				*get_next_min_node(t_stack *stack);
-int					get_distance(t_stack *stack, int index);
 
 //sort_utils
 bool				is_sorted(t_stack **lst);
 void				sort_check(t_stack **stack_a, t_stack **stack_b);
+int					get_max_num(t_stack *stack_a);
+int					find_minimum_index(t_stack *stack_a);
+int					get_distance(t_stack *stack, int index);
+
+//sort_up_to_five
 void				sort2(t_stack **stack_a);
 void				sort3(t_stack **stack_a);
 void				sort4(t_stack **stack_a, t_stack **stack_b);
@@ -80,6 +80,7 @@ void				sort5(t_stack **stack_a, t_stack **stack_b);
 
 //radix_sort
 void				radix_sort(t_stack **stack_a, t_stack **stack_b);
+
 //push_command
 void				push(t_stack **dest, t_stack **src);
 void				pa(t_stack **a, t_stack **b);
