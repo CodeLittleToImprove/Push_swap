@@ -21,10 +21,15 @@ void	process_arguments(int argc, char *argv[], size_t *size, char ***input)
 		exit(0);
 	}
 	if (argc == 2)
+	{
 		*input = ft_split(argv[1], ' ');
+		*size = argc;
+	}
 	else
+	{
 		*input = argv + 1;
-	*size = argc - 1;
+		*size = argc - 1;
+	}
 }
 
 int	main(int argc, char *argv[])
@@ -33,10 +38,11 @@ int	main(int argc, char *argv[])
 	size_t				size;
 	char				**input;
 
-//	printf("%d\n", argc);
+	printf("argc = %d\n", argc);
 	process_arguments(argc, argv, &size, &input);
-	if (is_valid_input(input, size) == true)
+	if (is_valid_input(input, size, argc) == true)
 	{
+		printf("valid input\n");
 		set = init_stacks_struct();
 		if (!set)
 			return (1);

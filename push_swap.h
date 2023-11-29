@@ -36,12 +36,12 @@ typedef struct s_stack_data_set
 }	t_stack_data_set;
 
 //input_validation
-bool				is_valid_input(char **input, size_t size);
+bool				is_valid_input(char **input, size_t size, size_t argc);
 bool				is_valid_start_character(char c);
-bool				is_valid_digit(char c);
+//bool				is_valid_digit(char c);
 bool				is_valid_number(char *str_nbr);
-bool				is_valid_int_string(char *str_nbr);
-bool				is_array_not_a_duplicate(char **input, size_t size);
+bool				is_valid_int_range(char *str_nbr);
+bool				is_array_not_a_duplicate(char **input, size_t size, size_t argc);
 
 //array_cleanup
 void				ft_free_array(char *array[]);
@@ -55,6 +55,7 @@ void				index_stack(t_stack **stack);
 
 //utils
 long long			ft_atoll(const char *nbr_str);
+size_t				count_items_in_array(char **input);
 
 //test utils
 void				print_stack(t_stack *stack);

@@ -11,33 +11,26 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// input check not working properly when input is like "2 2" instead of 2 2
-bool	is_valid_input(char **input, size_t size)
+
+bool	is_valid_input(char **input, size_t size, size_t argc)
 {
 	size_t	index;
 
 	index = 0;
 
-	if (is_array_not_a_duplicate(input, size))
+	if (is_array_not_a_duplicate(input, size, argc))
 	{
 		while (input[index] != NULL)
 		{
-//			printf("entry checked %s\n", input[index]);
-			if (!is_valid_number(input[index]) || !is_valid_int_string(input[index]))
-			{
+			if (!is_valid_number(input[index])
+				|| !is_valid_int_range(input[index]))
 				return (false);
-			}
-
 			index++;
 		}
-//		printf("input valid\n");
 		return (true);
 	}
 	else
-	{
-//		printf("input invalid\n");
 		return (false);
-	}
 }
 
 bool	is_valid_start_character(char c)
@@ -45,35 +38,34 @@ bool	is_valid_start_character(char c)
 	return (c == '+' || c == '-' || (c >= '0' && c <= '9'));
 }
 
-bool	is_valid_digit(char c)
-{
-	return (c >= '0' && c <= '9');
-}
-// maybe sign in separate function
+//bool	is_valid_digit(char c)
+//{
+//	return (c >= '0' && c <= '9');
+//}
 
 bool	is_valid_number(char *str_nbr)
 {
 	if (!is_valid_start_character(*str_nbr))
 		return (false);
-	if ((*str_nbr == '+' || *str_nbr == '-') && !is_valid_digit(str_nbr[1]))
+	if ((*str_nbr == '+' || *str_nbr == '-')
+		&& !is_valid_start_character(str_nbr[1]))
 		return (false);
 	while (*++str_nbr)
 	{
-		if (!is_valid_digit(*str_nbr))
+		if (!is_valid_start_character(*str_nbr))
 			return (false);
 	}
 	return (true);
 }
 
-bool	is_valid_int_string(char *str_nbr)
+bool	is_valid_int_range(char *str_nbr)
 {
 	if (ft_atoll(str_nbr) > INT_MAX || ft_atoll(str_nbr) < INT_MIN)
 		return (false);
-
-	return(true);
+	return (true);
 }
 
-bool	is_array_not_a_duplicate(char **input, size_t size)
+bool	is_array_not_a_duplicate(char **input, size_t size, size_t argc)
 {
 	size_t	outer_index;
 	size_t	inner_index;
@@ -81,21 +73,20 @@ bool	is_array_not_a_duplicate(char **input, size_t size)
 
 	outer_index = 0;
 	max_int_len = 20;
+
+	if (argc == 2)
+		size = count_items_in_array(input);
 	while (outer_index < size -1)
 	{
 		inner_index = outer_index + 1;
 		while (inner_index < size)
 		{
 			if (ft_strncmp(input[outer_index], input[inner_index],
-						   max_int_len) == 0)
-			{
-				printf("is a duplicate\n");
+					max_int_len) == 0)
 				return (false);
-			}
 			inner_index++;
 		}
 		outer_index++;
 	}
-printf("is not a duplicate\n");
 	return (true);
 }

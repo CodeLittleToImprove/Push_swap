@@ -40,3 +40,13 @@ long long	ft_atoll(const char *nbr_str)
 	}
 	return (sign * nbr);
 }
+
+size_t	count_items_in_array(char **input)
+{
+	size_t	count;
+
+	count = 0;
+	while (input[count] != NULL)
+		count++;
+	return (count);
+}
