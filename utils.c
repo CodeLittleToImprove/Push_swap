@@ -50,3 +50,13 @@ size_t	count_items_in_array(char **input)
 		count++;
 	return (count);
 }
+
+bool	is_valid_start_character(char c)
+{
+	return (c == '+' || c == '-' || (c >= '0' && c <= '9'));
+}
+
+bool	is_valid_digit(char c)
+{
+	return (c >= '0' && c <= '9');
+}

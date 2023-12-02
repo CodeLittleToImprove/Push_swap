@@ -17,7 +17,6 @@ bool	is_valid_input(char **input, size_t size, size_t argc)
 	size_t	index;
 
 	index = 0;
-
 	if (is_array_not_a_duplicate(input, size, argc))
 	{
 		while (input[index] != NULL)
@@ -33,26 +32,16 @@ bool	is_valid_input(char **input, size_t size, size_t argc)
 		return (false);
 }
 
-bool	is_valid_start_character(char c)
-{
-	return (c == '+' || c == '-' || (c >= '0' && c <= '9'));
-}
-
-//bool	is_valid_digit(char c)
-//{
-//	return (c >= '0' && c <= '9');
-//}
-
 bool	is_valid_number(char *str_nbr)
 {
 	if (!is_valid_start_character(*str_nbr))
 		return (false);
 	if ((*str_nbr == '+' || *str_nbr == '-')
-		&& !is_valid_start_character(str_nbr[1]))
+		&& !is_valid_digit(str_nbr[1]))
 		return (false);
 	while (*++str_nbr)
 	{
-		if (!is_valid_start_character(*str_nbr))
+		if (!is_valid_digit(*str_nbr))
 			return (false);
 	}
 	return (true);
@@ -73,7 +62,6 @@ bool	is_array_not_a_duplicate(char **input, size_t size, size_t argc)
 
 	outer_index = 0;
 	max_int_len = 20;
-
 	if (argc == 2)
 		size = count_items_in_array(input);
 	while (outer_index < size -1)

@@ -38,11 +38,9 @@ int	main(int argc, char *argv[])
 	size_t				size;
 	char				**input;
 
-	printf("argc = %d\n", argc);
 	process_arguments(argc, argv, &size, &input);
 	if (is_valid_input(input, size, argc) == true)
 	{
-		printf("valid input\n");
 		set = init_stacks_struct();
 		if (!set)
 			return (1);
@@ -57,9 +55,5 @@ int	main(int argc, char *argv[])
 			stack_clear(&set->stack_a), free(set), 0);
 	}
 	else
-	{
-		printf("in else\n");
 		return (write(STDERR_FILENO, "Error\n", 6), -1);
-	}
-
 }
