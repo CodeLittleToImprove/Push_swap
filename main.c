@@ -32,6 +32,12 @@ void	process_arguments(int argc, char *argv[], size_t *size, char ***input)
 	}
 }
 
+void	ft_split_used(int argc, char *array[])
+{
+	if (argc == 2)
+		ft_free_array(array);
+}
+
 int	main(int argc, char *argv[])
 {
 	t_stack_data_set	*set;
@@ -47,13 +53,11 @@ int	main(int argc, char *argv[])
 		set->stack_a = create_stack_a(input);
 		if (!set->stack_a)
 			return (1);
-		if (argc == 2)
-			ft_free_array(input);
+		ft_split_used(argc, input);
 		if (is_sorted(&set->stack_a) == true)
 			return (stack_clear(&set->stack_a), free(set), 0);
 		return (sort_check(&set->stack_a, &set->stack_b),
 			stack_clear(&set->stack_a), free(set), 0);
 	}
-	else
-		return (write(STDERR_FILENO, "Error\n", 6), -1);
+	return (ft_split_used(argc, input), write(STDERR_FILENO, "Error\n", 6), -1);
 }
