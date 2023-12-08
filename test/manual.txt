@@ -1,1 +1,4 @@
 valgrind --leak-check=full --show-leak-kinds=all ./push_swap "6 2 4"
+bash push_swap_tester/tester.sh ../push_swap 500 10
+https://github.com/louisabricot/push_swap_tester
+don't move anything outside the folder, only rename it to push_swap_tester

@@ -25,8 +25,8 @@
 typedef struct s_stack
 {
 	int							content;
-	struct s_stack				*next;
 	int							index;
+	struct s_stack				*next;
 }	t_stack;
 
 typedef struct s_stack_data_set
