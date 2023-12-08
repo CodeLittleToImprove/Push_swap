@@ -5,64 +5,58 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tbui-quo <tbui-quo@student.42wolfsburg.d>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/05/16 15:08:12 by tbui-quo          #+#    #+#              #
-#    Updated: 2023/05/31 15:02:08 by tbui-quo         ###   ########.fr        #
+#    Created: 2023/12/08 17:37:51 by tbui-quo          #+#    #+#              #
+#    Updated: 2023/12/08 17:37:51 by tbui-quo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Target names
+NAME = push_swap
 
-NAME			= push_swap
-
-LIBFT			= libft
-
-
-# Directories and source files
-
-SRCDIR			= srcs
-
-SRCS			= main.c input_validation.c array_cleanup.c stack_init.c test_utils.c utils.c linked_list_utils.c push_command.c swap_command.c rotate_command.c reverse_rotate_command.c sort_utils.c sort_up_to_five.c radix_sort.c
-
-OBJS			= ${SRCS:.c=.o}
-
-HEADER			= push_swap.h
-
-
-# Compiler and compilation flags
-
-CC				= cc
-
-CFLAGS			= -Wall -Wextra -Werror
-
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -g
 debug: CFLAGS += -g
-# Commands
 
-RM				= rm -f
+SRC = main.c \
+input_validation.c \
+array_cleanup.c \
+stack_init.c \
+test_utils.c \
+utils.c \
+linked_list_utils.c \
+push_command.c \
+swap_command.c \
+rotate_command.c \
+reverse_rotate_command.c \
+sort_utils.c \
+sort_up_to_five.c \
+radix_sort.c
 
-all:			lib ${NAME}
+OBJ = $(SRC:.c=.o)
 
-${NAME}:		${OBJS} ${LIBFT}/libft.a
-				${CC} ${CFLAGS} ${OBJS} -L ${LIBFT} -lft -o ${NAME}
+LIBS = -Llib/libft -lft -Llib/ft_printf -lftprintf
 
-${OBJS}:		${HEADER}
+all: $(NAME)
 
-lib:
-				make -C ${LIBFT}
+$(NAME): $(OBJ)
+	@make -C lib/libft
+	@make -C lib/ft_printf
+	@$(CC) $(CFLAGS) $(OBJ) $(LIBS) -o $(NAME)
 
-run:			all
-				./$(NAME)
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
+clean:
+	@make clean -C lib/libft
+	@make clean -C lib/ft_printf
+	@rm -f $(OBJ)
 
+fclean: clean
+	@make fclean -C lib/libft
+	@make fclean -C lib/ft_printf
+	@rm -f $(NAME)
+
+re: fclean all
 
 debug: all
-clean:
-				${RM} ${OBJS}
-				make clean -C ${LIBFT}
 
-fclean:			clean
-				${RM} ${NAME}
-				make fclean -C ${LIBFT}
-
-re:				fclean all
-
-.PHONY: all lib clean fclean re
+.PHONY: all clean fclean re

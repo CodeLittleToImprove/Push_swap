@@ -112,20 +112,20 @@ void	swap(t_stack **stack_x)
 	second_element = (*stack_x) ->next;
 	temp = second_element;
 
-//	printf("First element: %d\n", *(*stack_x)->content);
+//	ft_printf("First element: %d\n", *(*stack_x)->content);
 //	*stack_x = (*stack_x) ->next;
-//	printf("First element: %d\n", *first_element->content);
-//	printf("Second element: %d\n", *second_element->content);
-//	printf("Temp element: %d\n", *temp->content);
+//	ft_printf("First element: %d\n", *first_element->content);
+//	ft_printf("Second element: %d\n", *second_element->content);
+//	ft_printf("Temp element: %d\n", *temp->content);
 	first_element = (*stack_x) ->next;
 	second_element = (*stack_x);
 	*stack_x = temp;
 	second_element->next = first_element->next;
-//	printf("First element: %d\n", *first_element->content);
-//	printf("Second element: %d\n", *second_element->content);
-//	printf("Temp element: %d\n", *temp->content);
+//	ft_printf("First element: %d\n", *first_element->content);
+//	ft_printf("Second element: %d\n", *second_element->content);
+//	ft_printf("Temp element: %d\n", *temp->content);
 //	*stack_x = (*stack_x)->next;
-//	printf("Third element: %d\n", *(*stack_x)->content);
+//	ft_printf("Third element: %d\n", *(*stack_x)->content);
 	free(temp);
 }
 

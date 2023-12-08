@@ -148,14 +148,14 @@ int    main(void)
 	print_stack(set->stack_a);
 //	set->stack_b = init_stack_a(argv2);
 //	print_stack(set->stack_a);
-//	printf("StackA printed \n");
+//	ft_printf("StackA printed \n");
 //	print_stack(set->stack_b);
-//	printf("StackB printed \n");
+//	ft_printf("StackB printed \n");
 //	ss(&set->stack_a, &set->stack_b);
 //	print_stack(set->stack_a);
-//	printf("StackA printed \n");
+//	ft_printf("StackA printed \n");
 //	print_stack(set->stack_b);
-//	printf("StackB printed \n");
+//	ft_printf("StackB printed \n");
 	free(set);
 	return (0);
 }

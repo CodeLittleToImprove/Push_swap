@@ -164,7 +164,7 @@ bool	is_valid_input(char **input, size_t size)
 	{
 		while (input[index] != NULL)
 		{
-//			printf("entry checked %s\n", input[index]);
+//			ft_printf("entry checked %s\n", input[index]);
 			if (!is_valid_number(input[index]) || !is_valid_int_string(input[index]))
 			{
 				return (false);
@@ -172,12 +172,12 @@ bool	is_valid_input(char **input, size_t size)
 
 			index++;
 		}
-//		printf("input valid\n");
+//		ft_printf("input valid\n");
 		return (true);
 	}
 	else
 	{
-//		printf("input invalid\n");
+//		ft_printf("input invalid\n");
 		return (false);
 	}
 }

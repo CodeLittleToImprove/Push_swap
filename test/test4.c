@@ -26,7 +26,7 @@ void	insert_stack(t_stack **root, int value)
 		perror("Error allocating memory for new node");
 		exit(1);
 	}
-//	printf("Allocated memory for new node at address: %p\n", (void *)new_node);
+//	ft_printf("Allocated memory for new node at address: %p\n", (void *)new_node);
 	new_node->content = malloc(sizeof(int));
 	if (new_node->content == NULL)
 	{
@@ -39,7 +39,7 @@ void	insert_stack(t_stack **root, int value)
 
 	if (*root == NULL)
 	{
-//		printf("Should happen only once \n");
+//		ft_printf("Should happen only once \n");
 		*root = new_node;
 		return ;
 	}
@@ -48,12 +48,12 @@ void	insert_stack(t_stack **root, int value)
 	printf("current pointer value after setting root: %p\n", (void *)current);
 	if (current == NULL)
 	{
-//		printf("I am hopefully not here");
+//		ft_printf("I am hopefully not here");
 		perror("Error: Attempted to insert into an empty stack");
 		exit(1);
 	}
 //	if (current->next == NULL)
-//		printf("something went wrong \n");
+//		ft_printf("something went wrong \n");
 	while (current->next != NULL)
 	{
 		printf("current pointer value before setting next: %p\n", (void *)current);
