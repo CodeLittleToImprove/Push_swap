@@ -40,9 +40,8 @@ typedef struct s_stack_data_set
 bool				is_valid_input(char **input, size_t size, size_t argc);
 bool				is_valid_number(char *str_nbr);
 bool				is_valid_int_range(char *str_nbr);
-bool				is_array_not_a_duplicate(char **input,
+bool				has_no_duplicate_in_input(char **input,
 						size_t size, size_t argc);
-
 
 //array_cleanup
 void				ft_free_array(char *array[]);

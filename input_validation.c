@@ -17,17 +17,15 @@ bool	is_valid_input(char **input, size_t size, size_t argc)
 	size_t	index;
 
 	index = 0;
-	if (is_array_not_a_duplicate(input, size, argc))
+	while (input[index] != NULL)
 	{
-		while (input[index] != NULL)
-		{
-			if (!is_valid_number(input[index])
-				|| !is_valid_int_range(input[index]))
-				return (false);
-			index++;
-		}
-		return (true);
+		if (!is_valid_number(input[index])
+			|| !is_valid_int_range(input[index]))
+			return (false);
+	index++;
 	}
+	if (has_no_duplicate_in_input(input, size, argc))
+		return (true);
 	else
 		return (false);
 }
@@ -54,14 +52,14 @@ bool	is_valid_int_range(char *str_nbr)
 	return (true);
 }
 
-bool	is_array_not_a_duplicate(char **input, size_t size, size_t argc)
+bool	has_no_duplicate_in_input(char **input, size_t size, size_t argc)
 {
 	size_t	outer_index;
 	size_t	inner_index;
-	size_t	max_int_len;
+	int		number1;
+	int		number2;
 
 	outer_index = 0;
-	max_int_len = 20;
 	if (argc == 2)
 		size = count_items_in_array(input);
 	while (outer_index < size -1)
@@ -69,8 +67,9 @@ bool	is_array_not_a_duplicate(char **input, size_t size, size_t argc)
 		inner_index = outer_index + 1;
 		while (inner_index < size)
 		{
-			if (ft_strncmp(input[outer_index], input[inner_index],
-					max_int_len) == 0)
+			number1 = ft_atoi(input[outer_index]);
+			number2 = ft_atoi(input[inner_index]);
+			if (number1 == number2)
 				return (false);
 			inner_index++;
 		}
